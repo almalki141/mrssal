@@ -2,2005 +2,510 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>مرسال | خدمات المتاجر الإلكترونية</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="مرسال — حلول تأسيس وإدارة وتسويق المتاجر الإلكترونية وتطوير التطبيقات.">
+  <meta name="theme-color" content="#17110d">
+  <title>مرسال | شريكك التقني لنمو متجرك</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="description" content="كل خدمات متجرك الإلكتروني في مكان واحد: تأسيس المتاجر، الإدارة، الحملات الإعلانية، السوشيال ميديا، SEO وخدمات Google.">
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --bg:#fbf7ef;
-      --surface:#fffdf9;
-      --surface-2:#f6eddf;
-      --gold:#b4874c;
-      --gold-dark:#8e642f;
-      --ink:#2f241b;
-      --muted:#746558;
-      --line:#e8d8c2;
-      --shadow:0 18px 55px rgba(68,45,24,.10);
-      --radius:26px;
+    :root{
+      --bg:#f6f0e7;
+      --paper:#fffdfa;
+      --paper-2:#efe4d4;
+      --ink:#211812;
+      --muted:#766a60;
+      --gold:#b78649;
+      --gold-2:#805429;
+      --gold-3:#d7b17c;
+      --line:#e3d4c0;
+      --dark:#201711;
+      --dark-2:#120d0a;
+      --green:#21b65d;
+      --radius:28px;
+      --shadow:0 24px 70px rgba(52,33,18,.12);
+      --shadow-soft:0 12px 36px rgba(52,33,18,.08);
+      --container:min(1220px,calc(100% - 32px));
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:"Changa",Tahoma,Arial,sans-serif;
+      font-family:"Readex Pro",sans-serif;
       color:var(--ink);
       background:
-        radial-gradient(circle at 8% 4%,rgba(180,135,76,.11),transparent 25%),
-        radial-gradient(circle at 92% 18%,rgba(180,135,76,.08),transparent 24%),
+        radial-gradient(circle at 8% 0%,rgba(183,134,73,.15),transparent 28%),
+        radial-gradient(circle at 94% 13%,rgba(128,84,41,.10),transparent 25%),
         var(--bg);
-      line-height:1.8;
+      line-height:1.85;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
-    a{color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1180px,calc(100% - 32px));margin:auto}
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:blur(14px);
-      background:rgba(251,247,239,.9);
-      border-bottom:1px solid rgba(232,216,194,.8);
+
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:var(--container);margin:auto}
+    .section{padding:94px 0}
+    .section.soft{background:rgba(255,253,250,.55);border-block:1px solid rgba(227,212,192,.7)}
+    .section.dark{background:linear-gradient(180deg,var(--dark),var(--dark-2));color:white}
+    .section-head{max-width:820px;margin:0 auto 46px;text-align:center}
+    .section-head h2{font-size:clamp(34px,5vw,58px);line-height:1.25;margin:14px 0 12px;letter-spacing:-1.4px}
+    .section-head p{margin:0;color:var(--muted);font-size:18px}
+    .dark .section-head p{color:#d7c8bb}
+    .kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 15px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.7);color:var(--gold-2);
+      font-size:13px;font-weight:700;box-shadow:0 8px 28px rgba(62,40,20,.05)
     }
-    .nav{
-      min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px
-    }
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .brand img{width:154px;height:70px;object-fit:contain;border-radius:14px}
-    .navlinks{display:flex;align-items:center;gap:23px;font-weight:700;font-size:14px}
-    .navlinks a{text-decoration:none}
-    .navlinks a:hover{color:var(--gold-dark)}
+    .kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+    .dark .kicker{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.13);color:#f0d7b2}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      min-height:50px;padding:0 22px;border:0;border-radius:15px;
-      text-decoration:none;font-weight:900;cursor:pointer;
-      transition:.25s ease;
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:52px;padding:0 22px;border-radius:16px;border:1px solid transparent;
+      font-weight:700;transition:.25s ease;cursor:pointer
     }
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;box-shadow:0 12px 28px rgba(142,100,47,.22)}
-    .btn-light{background:#fff;border:1px solid var(--line);color:var(--gold-dark)}
-    .hero{padding:74px 0 58px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
-    .eyebrow{
-      display:inline-flex;padding:8px 16px;border-radius:999px;
-      background:#fff;border:1px solid var(--line);color:var(--gold-dark);font-weight:900;font-size:14px
-    }
-    h1{font-size:clamp(40px,6vw,72px);line-height:1.18;margin:18px 0 16px;letter-spacing:-1.5px}
-    .hero p{font-size:19px;color:var(--muted);margin:0 0 28px;max-width:680px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px}
-    .proof div{display:flex;align-items:center;gap:8px;color:#5a493b;font-weight:700}
-    .proof b{color:var(--gold-dark)}
-    .hero-visual{
-      position:relative;min-height:490px;border:1px solid var(--line);border-radius:34px;
-      background:linear-gradient(145deg,#fffdf8,#f4e6d0);box-shadow:var(--shadow);overflow:hidden;padding:30px
-    }
-    .hero-visual:before{
-      content:"";position:absolute;width:270px;height:270px;border-radius:50%;
-      background:rgba(180,135,76,.11);top:-70px;left:-80px
-    }
-    .screen{
-      position:relative;margin:54px auto 0;width:88%;border:10px solid #2d261f;border-radius:22px;
-      background:#fff;box-shadow:0 28px 50px rgba(49,35,22,.22);overflow:hidden
-    }
-    .screen-top{height:30px;background:#eadcc8;display:flex;gap:7px;align-items:center;padding:0 12px}
-    .screen-top i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
-    .screen-body{padding:18px}
-    .screen-hero{height:112px;border-radius:14px;background:linear-gradient(135deg,#d6b483,#9a6b34);position:relative}
-    .screen-hero:after{content:"مرسال لخدمات المتاجر";position:absolute;color:#fff;font-size:23px;font-weight:900;right:22px;top:26px}
-    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    .mini-grid span{height:74px;background:#f3e8d7;border-radius:12px}
-    .float-card{
-      position:absolute;background:#fff;border:1px solid var(--line);border-radius:18px;
-      padding:14px 17px;box-shadow:0 16px 38px rgba(65,42,22,.14);font-weight:900;color:var(--gold-dark)
-    }
-    .float-a{right:18px;top:35px} .float-b{left:14px;bottom:28px}
-    section{padding:62px 0}
-    .section-head{text-align:center;max-width:760px;margin:0 auto 36px}
-    .section-head h2{font-size:clamp(31px,4.6vw,48px);line-height:1.3;margin:8px 0}
-    .section-head p{color:var(--muted);font-size:17px;margin:0}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .service{
-      position:relative;padding:27px;border-radius:var(--radius);background:rgba(255,253,249,.92);
-      border:1px solid var(--line);box-shadow:0 12px 40px rgba(68,45,24,.07);transition:.25s ease
-    }
-    .service:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
-    .icon{
-      width:62px;height:62px;border-radius:19px;display:grid;place-items:center;
-      background:linear-gradient(145deg,#fff,#ead8bd);font-size:27px;margin-bottom:18px
-    }
-    .service h3{font-size:23px;margin:0 0 7px}
-    .service p{color:var(--muted);font-size:15px;margin:0 0 16px}
-    .service ul{margin:0 0 20px;padding:0;list-style:none}
-    .service li{padding:7px 26px 7px 0;position:relative;font-size:14px}
-    .service li:before{content:"✓";position:absolute;right:0;color:var(--gold-dark);font-weight:900}
-    .text-link{font-weight:900;color:var(--gold-dark);text-decoration:none}
-    .tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:28px}
-    .tab{
-      border:1px solid var(--line);background:#fff;padding:11px 18px;border-radius:999px;
-      font:inherit;font-weight:900;color:var(--ink);cursor:pointer
-    }
-    .tab.active{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;border-color:transparent}
-    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .package{
-      display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:var(--radius);
-      background:#fff;box-shadow:0 14px 45px rgba(68,45,24,.08)
-    }
-    .package.featured{border:2px solid var(--gold);transform:translateY(-10px)}
-    .pkg-tag{color:var(--gold-dark);font-weight:900;font-size:13px}
-    .package h3{font-size:25px;margin:4px 0 5px}
-    .price{font-size:39px;font-weight:900;color:var(--gold-dark);line-height:1.2;margin:9px 0 14px}
-    .price small{font-size:14px;color:var(--muted)}
-    .package p{color:var(--muted);font-size:14px}
-    .package ul{padding:0;margin:8px 0 22px;list-style:none;flex:1}
-    .package li{border-bottom:1px solid #f1e6d7;padding:9px 25px 9px 0;position:relative;font-size:14px}
-    .package li:before{content:"✓";position:absolute;right:0;color:var(--gold-dark);font-weight:bold}
-    .catalog{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .catalog-card{
-      padding:20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.86);
-      text-decoration:none;transition:.2s ease
-    }
-    .catalog-card:hover{transform:translateY(-4px);border-color:var(--gold)}
-    .catalog-card strong{display:block;font-size:17px;margin-bottom:4px}
-    .catalog-card span{color:var(--gold-dark);font-weight:900}
-    .why{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:center}
-    .why-panel{
-      min-height:430px;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,#f4e5cf,#fff);
-      display:grid;place-items:center;box-shadow:var(--shadow);padding:30px;text-align:center
-    }
-    .why-panel .big{font-size:74px;font-weight:900;color:var(--gold-dark);line-height:1}
-    .why-panel p{font-size:19px;color:var(--muted)}
-    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .why-item{padding:20px;border:1px solid var(--line);border-radius:19px;background:#fff}
-    .why-item b{display:block;font-size:18px;margin-bottom:4px}
-    .why-item span{color:var(--muted);font-size:14px}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-    .step{padding:24px;border-radius:22px;background:#fff;border:1px solid var(--line);text-align:center}
-    .step em{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--surface-2);color:var(--gold-dark);font-style:normal;font-weight:900;margin:0 auto 12px}
-    .cta{
-      padding:42px;border-radius:34px;background:linear-gradient(135deg,#b4874c,#815824);
-      color:#fff;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;box-shadow:var(--shadow)
-    }
-    .cta h2{font-size:36px;margin:0 0 7px}
-    .cta p{margin:0;color:#fff5e9}
-    .cta .btn{background:#fff;color:var(--gold-dark)}
-    .faq{max-width:860px;margin:auto}
-    details{background:#fff;border:1px solid var(--line);border-radius:17px;margin-bottom:11px;padding:16px 19px}
-    summary{font-weight:900;cursor:pointer}
-    details p{color:var(--muted);margin:8px 0 0}
-    footer{padding:32px 0 90px;text-align:center;color:var(--muted)}
-    .wa-float{
-      position:fixed;left:22px;bottom:22px;z-index:80;text-decoration:none;
-      background:#1ea952;color:#fff;border-radius:999px;padding:14px 20px;font-weight:900;
-      box-shadow:0 15px 35px rgba(11,99,47,.28)
-    }
-
-    .package{
-      position:relative;
-      overflow:hidden;
-      min-height:100%;
-    }
-    .package:before{
-      content:"";
-      position:absolute;
-      inset:0 0 auto 0;
-      height:5px;
-      background:linear-gradient(90deg,var(--gold),var(--gold-dark));
-      opacity:.75;
-    }
-    .package.featured{
-      background:linear-gradient(180deg,#fffaf1,#ffffff);
-      box-shadow:0 24px 65px rgba(142,100,47,.17);
-    }
-    .package.featured:after{
-      content:"الأكثر طلبًا";
-      position:absolute;
-      top:18px;
-      left:-42px;
-      width:150px;
-      text-align:center;
-      padding:6px 0;
-      background:var(--gold-dark);
-      color:#fff;
-      font-size:12px;
-      font-weight:900;
-      transform:rotate(-42deg);
-    }
-    .pkg-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      color:var(--gold-dark);
-      font-weight:900;
-      font-size:13px;
-      margin-bottom:6px;
-    }
-    .pkg-kicker:before{
-      content:"";
-      width:8px;height:8px;border-radius:50%;
-      background:var(--gold);
-    }
-    .price-wrap{
-      display:flex;
-      align-items:flex-end;
-      gap:8px;
-      margin:12px 0 16px;
-    }
-    .price{
-      font-size:46px;
-      letter-spacing:-1px;
-      margin:0;
-    }
-    .price-meta{
-      color:var(--muted);
-      font-size:13px;
-      font-weight:800;
-      padding-bottom:7px;
-    }
-    .apps-section{
-      background:linear-gradient(180deg,#2d2118,#201710);
-      color:#fff;
-    }
-    .apps-section .section-head p{color:#d8c9ba}
-    .apps-section .eyebrow{
-      background:rgba(255,255,255,.08);
-      border-color:rgba(255,255,255,.16);
-      color:#f3d8b0;
-    }
-    .apps-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-      align-items:stretch;
-    }
-    .app-card{
-      position:relative;
-      padding:30px;
-      border-radius:30px;
-      border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
-      backdrop-filter:blur(12px);
-      box-shadow:0 20px 55px rgba(0,0,0,.18);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-    .app-card:before{
-      content:"";
-      position:absolute;
-      width:180px;height:180px;border-radius:50%;
-      background:rgba(180,135,76,.18);
-      top:-80px;left:-60px;
-      filter:blur(8px);
-    }
-    .app-card.featured{
-      transform:translateY(-12px);
-      background:linear-gradient(180deg,#b4874c,#7d5527);
-      border-color:#dcb77f;
-    }
-    .app-badge{
-      position:relative;
-      z-index:1;
-      display:inline-flex;
-      align-self:flex-start;
-      padding:7px 13px;
-      border-radius:999px;
-      background:rgba(255,255,255,.12);
-      color:#f6dec0;
-      font-size:12px;
-      font-weight:900;
-      margin-bottom:14px;
-    }
-    .app-card.featured .app-badge{
-      background:#fff3df;
-      color:#7b5429;
-    }
-    .app-card h3{
-      position:relative;
-      z-index:1;
-      font-size:30px;
-      margin:0 0 8px;
-    }
-    .app-card p{
-      position:relative;
-      z-index:1;
-      color:#d8c9ba;
-      margin:0 0 16px;
-      font-size:14px;
-    }
-    .app-card.featured p{color:#fff3e2}
-    .app-price{
-      position:relative;
-      z-index:1;
-      font-size:52px;
-      line-height:1;
-      font-weight:900;
-      margin:10px 0 20px;
-    }
-    .app-price small{
-      font-size:14px;
-      font-weight:800;
-      color:#d8c9ba;
-    }
-    .app-card.featured .app-price small{color:#fff3e2}
-    .app-list{
-      position:relative;
-      z-index:1;
-      list-style:none;
-      padding:0;
-      margin:0 0 24px;
-      flex:1;
-    }
-    .app-list li{
-      padding:11px 26px 11px 0;
-      border-bottom:1px solid rgba(255,255,255,.1);
-      position:relative;
-      font-size:14px;
-    }
-    .app-list li:before{
-      content:"✓";
-      position:absolute;
-      right:0;
-      color:#e8bf85;
-      font-weight:900;
-    }
-    .app-card.featured .app-list li:before{color:#fff}
-    .app-card .btn{
-      position:relative;
-      z-index:1;
-      background:#fff;
-      color:#7d5527;
-    }
-    .apps-note{
-      text-align:center;
-      margin-top:24px;
-      color:#cdbba9;
-      font-size:13px;
-    }
-    @media (max-width:960px){
-      .apps-grid{grid-template-columns:1fr}
-      .app-card.featured{transform:none}
-    }
-
-    @media (max-width:960px){
-      .navlinks{display:none}
-      .hero-grid,.why{grid-template-columns:1fr}
-      .services,.packages{grid-template-columns:1fr}
-      .package.featured{transform:none}
-      .catalog{grid-template-columns:repeat(2,1fr)}
-      .steps{grid-template-columns:repeat(2,1fr)}
-      .cta{grid-template-columns:1fr;text-align:center}
-    }
-    @media (max-width:600px){
-      .hero{padding-top:42px}
-      h1{font-size:42px}
-      .hero-visual{min-height:380px;padding:15px}
-      .float-card{font-size:12px}
-      .services,.packages,.why-grid,.catalog,.steps{grid-template-columns:1fr}
-      section{padding:48px 0}
-      .nav .btn{padding:0 14px;font-size:13px}
-      .brand img{width:120px}
-      .cta{padding:28px 20px}
-      .cta h2{font-size:28px}
-      .wa-float{left:14px;right:14px;text-align:center}
-    }
-  
-    /* ===== MERSAL PREMIUM REDESIGN ===== */
-    :root{
-      --bg:#f7f1e8;
-      --surface:#fffdfa;
-      --surface-2:#efe3d4;
-      --gold:#b4874c;
-      --gold-dark:#7a5328;
-      --gold-soft:#d7b27a;
-      --ink:#241b15;
-      --muted:#74685d;
-      --line:#e5d6c4;
-      --shadow:0 24px 70px rgba(74,48,24,.12);
-      --shadow-soft:0 12px 35px rgba(74,48,24,.08);
-      --radius:30px;
-    }
-
-    body{
-      background:
-        radial-gradient(circle at 8% 5%,rgba(180,135,76,.14),transparent 26%),
-        radial-gradient(circle at 92% 12%,rgba(142,100,47,.11),transparent 28%),
-        linear-gradient(180deg,#fbf7ef 0%,#f7f1e8 52%,#f4ecdf 100%);
-      color:var(--ink);
-    }
-
-    h1,h2,h3,.brand,.btn,.eyebrow,.tab,.pkg-kicker,.app-badge,.price,.app-price{
-      font-family:"Changa",sans-serif;
-    }
-
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:white;box-shadow:0 14px 34px rgba(128,84,41,.27)}
+    .btn-light{background:white;border-color:var(--line)}
+    .btn-dark{background:var(--dark);color:white}
     .topbar{
-      background:rgba(251,247,239,.78);
-      border-bottom:1px solid rgba(229,214,196,.76);
-      box-shadow:0 8px 26px rgba(72,45,20,.04);
+      position:sticky;top:0;z-index:70;
+      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+      background:rgba(246,240,231,.83);border-bottom:1px solid rgba(227,212,192,.72)
     }
-
-    .nav{min-height:84px}
-    .brand img{
-      width:165px;
-      height:74px;
-      object-fit:contain;
-      filter:drop-shadow(0 6px 14px rgba(74,48,24,.08));
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:27px;font-weight:700}
+    .brand-mark{
+      width:44px;height:44px;border-radius:15px;display:grid;place-items:center;
+      background:linear-gradient(145deg,var(--gold),var(--gold-2));color:white;
+      box-shadow:0 10px 24px rgba(128,84,41,.24)
     }
-
-    .navlinks{
-      background:rgba(255,255,255,.58);
-      border:1px solid rgba(229,214,196,.9);
-      padding:10px 18px;
-      border-radius:999px;
-      gap:18px;
-      box-shadow:0 10px 28px rgba(74,48,24,.05);
+    .nav-links{
+      display:flex;align-items:center;gap:7px;padding:7px;
+      border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.63)
     }
-
-    .navlinks a{
-      padding:7px 10px;
-      border-radius:999px;
-      transition:.25s ease;
+    .nav-links a{padding:8px 12px;border-radius:999px;font-size:13px;font-weight:600}
+    .nav-links a:hover{background:white;color:var(--gold-2)}
+    .hero{padding:78px 0 52px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center;min-height:650px}
+    .hero h1{font-size:clamp(48px,7vw,82px);line-height:1.12;letter-spacing:-2.5px;margin:19px 0 24px}
+    .hero h1 span{color:var(--gold-2)}
+    .hero p{font-size:20px;color:var(--muted);max-width:680px;margin:0 0 30px}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+    .proof div{
+      padding:13px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.62);
+      text-align:center;color:var(--muted);font-size:13px
     }
-
-    .navlinks a:hover{
-      background:#fff;
-      color:var(--gold-dark);
+    .proof b{display:block;color:var(--ink);font-size:18px}
+    .hero-art{
+      position:relative;min-height:540px;border-radius:38px;padding:28px;
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(237,221,199,.92));
+      box-shadow:var(--shadow);overflow:hidden
     }
-
-    .btn{
-      min-height:54px;
-      border-radius:17px;
-      padding-inline:24px;
-      letter-spacing:-.15px;
+    .hero-art:before{
+      content:"";position:absolute;width:360px;height:360px;border-radius:50%;
+      background:rgba(183,134,73,.15);top:-150px;left:-100px
     }
-
-    .btn-primary{
-      background:linear-gradient(135deg,#bd9259 0%,#8d622f 60%,#6d4722 100%);
-      box-shadow:0 16px 34px rgba(112,72,31,.28);
+    .dashboard{
+      position:relative;margin:65px auto 0;width:90%;background:#fff;border:11px solid #241b15;
+      border-radius:26px;overflow:hidden;box-shadow:0 36px 70px rgba(43,28,17,.25)
     }
-
-    .btn-primary:hover{
-      box-shadow:0 20px 42px rgba(112,72,31,.34);
+    .dash-top{height:35px;background:#ebdfcf;display:flex;align-items:center;gap:6px;padding:0 13px}
+    .dash-top i{width:8px;height:8px;border-radius:50%;background:#b89264}
+    .dash-body{padding:20px;display:grid;grid-template-columns:1.5fr .8fr;gap:12px}
+    .chart,.metric{border:1px solid #eee3d6;border-radius:16px;background:#fffaf3}
+    .chart{padding:16px}
+    .chart strong{font-size:28px}
+    .bars{height:150px;display:flex;align-items:end;gap:8px;margin-top:14px}
+    .bars i{flex:1;border-radius:7px 7px 2px 2px;background:linear-gradient(#c79a61,#7e5129)}
+    .metric-stack{display:grid;gap:10px}
+    .metric{padding:14px}
+    .metric span{display:block;color:var(--muted);font-size:11px}
+    .metric b{font-size:22px}
+    .float{
+      position:absolute;padding:12px 15px;border-radius:17px;background:white;border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);font-size:13px;font-weight:700
     }
+    .float.a{top:34px;right:16px}
+    .float.b{bottom:25px;left:13px}
+    .float.c{bottom:17px;right:68px;color:#247b4c}
 
-    .hero{padding:92px 0 70px}
-    .hero-grid{gap:70px}
-    .eyebrow{
-      background:rgba(255,255,255,.72);
-      box-shadow:0 8px 24px rgba(74,48,24,.06);
-      border-color:rgba(229,214,196,.88);
-      padding:10px 17px;
+    .grid{display:grid;gap:20px}
+    .work-grid{grid-template-columns:repeat(4,1fr)}
+    .service-grid{grid-template-columns:repeat(3,1fr)}
+    .extra-grid{grid-template-columns:repeat(4,1fr)}
+    .three-grid{grid-template-columns:repeat(3,1fr)}
+    .card{
+      background:linear-gradient(180deg,#fff,#fffaf4);border:1px solid var(--line);
+      border-radius:var(--radius);box-shadow:var(--shadow-soft);transition:.28s ease
     }
-
-    h1{
-      font-size:clamp(46px,6.6vw,80px);
-      line-height:1.16;
-      letter-spacing:-2.6px;
-      max-width:780px;
+    .card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+    .work-card{overflow:hidden}
+    .work-shot{height:175px;padding:16px;background:linear-gradient(145deg,#ead9c1,#fbf6ef);display:flex;align-items:end}
+    .browser{width:100%;height:135px;border-radius:17px 17px 0 0;background:#fff;overflow:hidden;box-shadow:0 15px 35px rgba(63,39,20,.15)}
+    .browser-top{height:22px;background:#e8dccb;display:flex;gap:4px;align-items:center;padding:0 8px}
+    .browser-top i{width:5px;height:5px;border-radius:50%;background:#b78649}
+    .browser-body{padding:10px}
+    .browser-hero{height:60px;border-radius:10px;background:linear-gradient(135deg,#cf9d61,#82532a);display:grid;place-items:center;color:white;font-size:12px;font-weight:700}
+    .browser-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:7px}
+    .browser-lines span{height:24px;border-radius:6px;background:#f0e5d7}
+    .work-body{padding:20px}
+    .work-meta{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px}
+    .tag{display:inline-flex;padding:5px 9px;border-radius:999px;background:#f1e5d4;color:var(--gold-2);font-size:10px;font-weight:700}
+    .work-body h3{font-size:20px;margin:0 0 6px}
+    .work-body p{color:var(--muted);font-size:13px;margin:0;min-height:49px}
+    .link{display:inline-flex;margin-top:14px;color:var(--gold-2);font-weight:700;font-size:13px}
+    .service-card{padding:28px}
+    .service-icon{
+      width:58px;height:58px;border-radius:19px;display:grid;place-items:center;margin-bottom:17px;
+      background:linear-gradient(145deg,#fff6e8,#e5caa2);font-size:25px;
+      box-shadow:inset 0 0 0 1px rgba(183,134,73,.18)
     }
+    .service-card h3{font-size:22px;margin:0 0 8px}
+    .service-card p{color:var(--muted);font-size:14px;margin:0 0 15px}
+    .checks{list-style:none;padding:0;margin:0}
+    .checks li{position:relative;padding:6px 22px 6px 0;font-size:13px}
+    .checks li:before{content:"✓";position:absolute;right:0;color:var(--gold-2);font-weight:700}
 
-    .hero p{
-      font-size:20px;
-      line-height:2;
-      max-width:700px;
-    }
-
-    .proof{
-      margin-top:34px;
-      padding-top:24px;
-      border-top:1px solid rgba(229,214,196,.9);
-    }
-
-    .hero-visual{
-      min-height:540px;
-      border-radius:40px;
-      padding:34px;
-      background:
-        linear-gradient(145deg,rgba(255,255,255,.96),rgba(239,225,206,.92));
-      box-shadow:0 34px 90px rgba(74,48,24,.16);
-    }
-
-    .hero-visual:after{
-      content:"";
-      position:absolute;
-      inset:18px;
-      border-radius:28px;
-      border:1px solid rgba(180,135,76,.18);
-      pointer-events:none;
-    }
-
-    .screen{
-      margin-top:65px;
-      width:90%;
-      border:12px solid #241c16;
-      border-radius:28px;
-      box-shadow:0 34px 62px rgba(49,35,22,.27);
-    }
-
-    .screen-body{padding:22px}
-    .screen-hero{height:130px;border-radius:18px}
-    .screen-hero:after{
-      font-family:"Changa",sans-serif;
-      font-size:22px;
-      top:34px;
-    }
-
-    .float-card{
-      border-radius:20px;
-      padding:15px 18px;
-      box-shadow:0 18px 46px rgba(65,42,22,.15);
-      backdrop-filter:blur(8px);
-    }
-
-    section{padding:78px 0}
-    .section-head{margin-bottom:44px}
-    .section-head h2{
-      font-size:clamp(34px,4.8vw,54px);
-      letter-spacing:-1.4px;
-    }
-
-    .services{gap:24px}
-    .service{
-      padding:30px;
-      border-radius:30px;
-      background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,252,247,.94));
-      box-shadow:0 14px 40px rgba(68,45,24,.07);
-      overflow:hidden;
-    }
-
-    .service:before{
-      content:"";
-      position:absolute;
-      top:0;right:0;left:0;
-      height:5px;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:.55;
-    }
-
-    .service:hover{
-      transform:translateY(-9px);
-      box-shadow:0 26px 60px rgba(68,45,24,.12);
-      border-color:#d6bc97;
-    }
-
-    .icon{
-      width:66px;height:66px;
-      border-radius:22px;
-      background:linear-gradient(145deg,#fff8ec,#e7d2b2);
-      box-shadow:inset 0 0 0 1px rgba(180,135,76,.16),0 10px 22px rgba(68,45,24,.08);
-    }
-
+    .tabs-wrap{display:flex;justify-content:center;margin-bottom:28px}
     .tabs{
-      background:rgba(255,255,255,.62);
-      border:1px solid var(--line);
-      padding:8px;
-      border-radius:999px;
-      width:max-content;
-      max-width:100%;
-      margin-inline:auto;
-      margin-bottom:34px;
-      box-shadow:0 10px 30px rgba(74,48,24,.06);
+      display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:7px;
+      width:min(830px,100%);border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72)
     }
-
-    .tab{
-      border:0;
-      background:transparent;
-      padding:12px 20px;
-      transition:.25s ease;
+    .tab{border:0;background:transparent;border-radius:999px;padding:11px 8px;font-weight:700;cursor:pointer}
+    .tab.active{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:white;box-shadow:0 10px 24px rgba(128,84,41,.23)}
+    .package-card{padding:29px;position:relative;overflow:hidden}
+    .package-card.featured{border:2px solid var(--gold);background:linear-gradient(180deg,#fff8ed,#fff)}
+    .package-card.featured:after{
+      content:"الأكثر طلبًا";position:absolute;top:17px;left:-42px;width:145px;padding:5px 0;
+      text-align:center;background:var(--gold-2);color:white;font-size:10px;font-weight:700;transform:rotate(-42deg)
     }
+    .package-kicker{font-size:12px;color:var(--gold-2);font-weight:700}
+    .package-card h3{font-size:25px;margin:4px 0}
+    .price{font-size:42px;font-weight:700;color:var(--gold-2);line-height:1.2;margin:14px 0}
+    .price small{font-size:12px;color:var(--muted)}
+    .package-card p{color:var(--muted);font-size:13px}
+    .package-card .btn{width:100%;margin-top:18px}
 
-    .tab.active{
-      box-shadow:0 12px 26px rgba(142,100,47,.24);
-    }
+    .extra-card{padding:22px;min-height:130px;display:flex;flex-direction:column;justify-content:space-between}
+    .extra-card strong{font-size:17px}
+    .extra-card span{color:var(--gold-2);font-weight:700}
 
-    .packages{gap:24px}
-    .package{
-      border-radius:32px;
-      padding:32px;
-      box-shadow:0 18px 50px rgba(68,45,24,.09);
-      background:
-        linear-gradient(180deg,#fff 0%,#fffdf8 100%);
-      transition:.3s ease;
-    }
+    .app-card{padding:30px;border-color:rgba(255,255,255,.13);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));color:white}
+    .app-card.featured{background:linear-gradient(180deg,#bb8b51,#774b24);transform:translateY(-12px)}
+    .app-badge{display:inline-flex;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.10);font-size:11px;color:#f2d7ae;font-weight:700}
+    .app-card h3{font-size:29px;margin:14px 0 7px}
+    .app-card p{color:#d7c8bb;font-size:13px}
+    .app-price{font-size:52px;font-weight:700;margin:16px 0}
+    .app-price small{font-size:12px;color:#d7c8bb}
+    .app-card .checks li{border-bottom:1px solid rgba(255,255,255,.10)}
+    .app-card .checks li:before{color:#f1c989}
+    .app-card .btn{width:100%;margin-top:18px;background:white;color:var(--gold-2)}
 
-    .package:hover{
-      transform:translateY(-8px);
-      box-shadow:0 28px 72px rgba(68,45,24,.14);
-    }
+    .why-grid{grid-template-columns:repeat(3,1fr)}
+    .why-card{padding:24px;text-align:center}
+    .why-card b{display:block;font-size:24px;color:var(--gold-2)}
+    .why-card span{color:var(--muted);font-size:13px}
+    .steps{grid-template-columns:repeat(4,1fr)}
+    .step{padding:24px;text-align:center}
+    .step em{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:var(--paper-2);color:var(--gold-2);font-style:normal;font-weight:700}
+    .step h3{font-size:18px;margin:0 0 6px}
+    .step p{color:var(--muted);font-size:12px;margin:0}
 
-    .package.featured{
-      border:1px solid #c9a16e;
-      transform:translateY(-14px);
-      background:
-        radial-gradient(circle at 100% 0%,rgba(180,135,76,.16),transparent 32%),
-        linear-gradient(180deg,#fffaf1 0%,#ffffff 100%);
-    }
-
-    .price-wrap{
-      padding:14px 0 18px;
-      border-bottom:1px solid #efe4d7;
-      margin-bottom:12px;
-    }
-
-    .price{
-      color:var(--ink);
-      font-size:50px;
-      letter-spacing:-1.8px;
-    }
-
-    .price-meta{
-      font-size:12px;
-      line-height:1.6;
-    }
-
-    .package ul{margin-top:14px}
-    .package li{
-      padding-block:11px;
-    }
-
-    .catalog{gap:18px}
-    .catalog-card{
-      border-radius:24px;
-      padding:24px;
-      min-height:130px;
-      background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,252,247,.9));
-      box-shadow:0 12px 34px rgba(68,45,24,.06);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-    }
-
-    .catalog-card:hover{
-      transform:translateY(-7px);
-      box-shadow:0 24px 52px rgba(68,45,24,.11);
-    }
-
-    .apps-section{
-      padding:96px 0;
-      background:
-        radial-gradient(circle at 10% 0%,rgba(180,135,76,.16),transparent 28%),
-        radial-gradient(circle at 90% 100%,rgba(180,135,76,.10),transparent 30%),
-        linear-gradient(180deg,#2a2018 0%,#1e1712 100%);
-    }
-
-    .apps-grid{gap:26px}
-    .app-card{
-      border-radius:34px;
-      padding:34px;
-      box-shadow:0 28px 76px rgba(0,0,0,.22);
-    }
-
-    .app-card.featured{
-      transform:translateY(-18px);
-      background:
-        radial-gradient(circle at 90% 0%,rgba(255,255,255,.14),transparent 26%),
-        linear-gradient(180deg,#b9894f 0%,#8c602f 60%,#6f4824 100%);
-      box-shadow:0 34px 90px rgba(0,0,0,.30);
-    }
-
-    .app-price{
-      font-size:58px;
-      letter-spacing:-1.8px;
-    }
-
-    .why-panel{
-      background:
-        radial-gradient(circle at 20% 0%,rgba(255,255,255,.55),transparent 36%),
-        linear-gradient(145deg,#ead7bd,#fffaf2);
-      border-radius:38px;
-      box-shadow:0 30px 80px rgba(68,45,24,.13);
-    }
-
-    .why-panel .big{
-      font-family:"Changa",sans-serif;
-      font-size:80px;
-      letter-spacing:-2px;
-    }
-
-    .why-item{
-      border-radius:22px;
-      padding:22px;
-      box-shadow:0 10px 30px rgba(68,45,24,.05);
-    }
-
-    .step{
-      border-radius:24px;
-      padding:28px 22px;
-      box-shadow:0 10px 30px rgba(68,45,24,.05);
-      transition:.25s ease;
-    }
-
-    .step:hover{
-      transform:translateY(-5px);
-      box-shadow:0 20px 46px rgba(68,45,24,.09);
-    }
-
+    .faq{max-width:900px;margin:auto;display:grid;gap:11px}
+    details{background:white;border:1px solid var(--line);border-radius:17px;padding:0 19px}
+    summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;display:flex;justify-content:space-between}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--gold-2);font-size:20px}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);margin:0;padding:0 0 18px;font-size:14px}
     .cta{
-      padding:54px;
-      border-radius:38px;
-      background:
-        radial-gradient(circle at 15% 20%,rgba(255,255,255,.13),transparent 32%),
-        linear-gradient(135deg,#bd9259 0%,#8e642f 58%,#68431f 100%);
-      box-shadow:0 30px 80px rgba(94,61,28,.25);
+      border-radius:34px;padding:52px;background:linear-gradient(135deg,#bd9059,#744820);
+      color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:var(--shadow)
+    }
+    .cta h2{font-size:clamp(30px,4vw,48px);margin:0 0 7px}
+    .cta p{margin:0;color:#f2e2d0}
+    .cta .btn{background:white;color:var(--gold-2)}
+    footer{padding:54px 0 28px;background:#18110d;color:#e8dbcf}
+    .footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:28px}
+    footer h4{color:white;margin:0 0 12px}
+    footer p,footer a,footer span{color:#bcaea3;font-size:13px}
+    .footer-links{display:grid;gap:7px}
+    .copy{margin-top:35px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;color:#998b81;font-size:12px}
+    .wa{
+      position:fixed;left:18px;bottom:18px;z-index:80;
+      padding:13px 18px;border-radius:999px;background:linear-gradient(135deg,#28d16b,#139248);
+      color:white;font-weight:700;box-shadow:0 14px 34px rgba(15,128,62,.28)
     }
 
-    details{
-      border-radius:20px;
-      padding:18px 22px;
-      box-shadow:0 8px 24px rgba(68,45,24,.04);
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .work-grid{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
     }
 
-    .wa-float{
-      background:linear-gradient(135deg,#25d366,#159447);
-      padding:15px 22px;
-      box-shadow:0 18px 42px rgba(15,125,62,.32);
+    /* Mobile design: all option/card groups are three side-by-side */
+    @media(max-width:767px){
+      :root{--container:calc(100% - 16px)}
+      .section{padding:48px 0}
+      .section-head{margin-bottom:24px}
+      .section-head h2{font-size:29px;letter-spacing:-.4px}
+      .section-head p{font-size:13px}
+      .kicker{font-size:10px;padding:6px 10px}
+      .nav{height:68px}
+      .brand{font-size:21px}.brand-mark{width:37px;height:37px}
+      .nav>.btn{display:none}
+      .hero{padding:44px 0 30px}
+      .hero-grid{gap:28px;min-height:auto}
+      .hero h1{font-size:40px;letter-spacing:-1px}
+      .hero p{font-size:15px}
+      .hero-actions .btn{flex:1;padding:0 10px;font-size:12px}
+      .proof{grid-template-columns:repeat(3,1fr);gap:6px}
+      .proof div{padding:8px 3px;font-size:9px}.proof b{font-size:13px}
+      .hero-art{min-height:390px;padding:13px;border-radius:26px}
+      .dashboard{margin-top:55px;width:94%;border-width:7px}
+      .dash-body{padding:9px;gap:6px}.bars{height:90px}.metric{padding:7px}.metric b{font-size:14px}
+      .float{font-size:9px;padding:8px 10px}
+
+      .work-grid,.service-grid,.extra-grid,.three-grid,.why-grid,.steps{
+        grid-template-columns:repeat(3,minmax(0,1fr))!important;
+        gap:7px!important;
+      }
+
+      .work-card,.service-card,.extra-card,.package-card,.app-card,.why-card,.step{
+        min-width:0!important;margin:0!important;transform:none!important;border-radius:14px!important
+      }
+
+      .work-shot{height:72px;padding:5px}.browser{height:62px;border-radius:8px 8px 0 0}
+      .browser-top{height:11px}.browser-body{padding:4px}.browser-hero{height:27px;font-size:7px}.browser-lines span{height:10px}
+      .work-body{padding:8px 6px}.work-meta small,.work-body p{display:none}.tag{font-size:7px;padding:2px 4px}
+      .work-body h3{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.link{font-size:7px;margin-top:4px}
+
+      .service-card{padding:11px 7px}.service-icon{width:34px;height:34px;font-size:15px;border-radius:10px;margin:0 auto 7px}
+      .service-card h3{font-size:11px;text-align:center}.service-card p,.service-card .checks{display:none}.service-card .link{display:block;text-align:center}
+
+      .tabs{grid-template-columns:repeat(4,minmax(0,1fr));border-radius:16px;padding:5px}
+      .tab{padding:8px 2px;font-size:8px;white-space:normal;border-radius:9px}
+
+      .package-card{padding:11px 7px}.package-card.featured:after{display:none}.package-kicker{font-size:7px}
+      .package-card h3{font-size:11px}.price{font-size:21px;margin:7px 0}.price small{font-size:7px}
+      .package-card p{display:none}.package-card .checks li{display:none}.package-card .checks li:nth-child(-n+3){display:block;font-size:7px;padding:4px 9px 4px 0}
+      .package-card .btn{min-height:30px;font-size:7px;padding:0 2px;border-radius:8px;margin-top:8px}
+
+      .extra-card{padding:10px 7px;min-height:84px;text-align:center}.extra-card strong{font-size:9px;line-height:1.4}.extra-card span{font-size:8px}
+
+      .app-card{padding:11px 7px}.app-badge{font-size:7px;padding:3px 5px}.app-card h3{font-size:11px;margin:7px 0 4px}
+      .app-card p{display:none}.app-price{font-size:20px;white-space:nowrap;margin:6px 0}.app-price small{display:block;font-size:7px}
+      .app-card .checks li{display:none}.app-card .checks li:nth-child(-n+3){display:block;font-size:7px;padding:4px 9px 4px 0}
+      .app-card .btn{min-height:30px;font-size:7px;padding:0 2px;border-radius:8px;margin-top:8px}
+
+      .why-card,.step{padding:10px 6px}.why-card b{font-size:12px}.why-card span,.step p{font-size:7px}.step em{width:29px;height:29px;font-size:8px}.step h3{font-size:10px}
+
+      .cta{padding:28px 20px;display:block;text-align:center}.cta .btn{width:100%;margin-top:17px}
+      .footer-grid{grid-template-columns:1fr}.copy{display:block}
+      .wa{left:12px;bottom:12px;font-size:11px;padding:11px 14px}
     }
-
-    @media (max-width:960px){
-      .package.featured,.app-card.featured{transform:none}
-      .tabs{width:100%;border-radius:28px}
-    }
-
-    @media (max-width:600px){
-      h1{font-size:44px;letter-spacing:-1.4px}
-      .nav{min-height:72px}
-      .brand img{width:126px;height:60px}
-      .hero{padding-top:50px}
-      .hero-visual{min-height:410px;border-radius:28px}
-      .package,.app-card{padding:26px}
-      .cta{padding:34px 24px}
-    }
-
-  
-    .portfolio-section{
-      padding:96px 0;
-      background:linear-gradient(180deg,#fffaf3 0%,#f7efe4 100%);
-      border-top:1px solid rgba(229,214,196,.75);
-      border-bottom:1px solid rgba(229,214,196,.75);
-    }
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:22px;
-    }
-    .project-card{
-      position:relative;
-      overflow:hidden;
-      border-radius:28px;
-      border:1px solid var(--line);
-      background:#fff;
-      box-shadow:0 16px 45px rgba(68,45,24,.08);
-      transition:.28s ease;
-    }
-    .project-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 28px 68px rgba(68,45,24,.14);
-      border-color:#d2b184;
-    }
-    .project-shot{
-      height:180px;
-      padding:16px;
-      background:
-        radial-gradient(circle at 15% 0%,rgba(180,135,76,.18),transparent 32%),
-        linear-gradient(145deg,#efe0ca,#fdf9f3);
-      display:flex;
-      align-items:flex-end;
-    }
-    .project-browser{
-      width:100%;
-      height:138px;
-      border-radius:18px 18px 0 0;
-      background:#fff;
-      box-shadow:0 16px 35px rgba(68,45,24,.16);
-      overflow:hidden;
-      border:1px solid rgba(229,214,196,.85);
-    }
-    .project-browser-top{
-      height:24px;
-      background:#eee3d4;
-      display:flex;
-      align-items:center;
-      gap:5px;
-      padding:0 9px;
-    }
-    .project-browser-top i{
-      width:6px;height:6px;border-radius:50%;
-      background:#b4874c;
-      opacity:.75;
-    }
-    .project-browser-body{
-      padding:12px;
-    }
-    .project-browser-hero{
-      height:58px;
-      border-radius:10px;
-      background:linear-gradient(135deg,#d0a875,#8a5d2e);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-family:"Changa",sans-serif;
-      font-size:13px;
-      font-weight:700;
-      text-align:center;
-    }
-    .project-browser-lines{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:6px;
-      margin-top:8px;
-    }
-    .project-browser-lines span{
-      height:25px;
-      border-radius:7px;
-      background:#f1e8dc;
-    }
-    .project-content{
-      padding:22px;
-    }
-    .project-meta{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      margin-bottom:8px;
-    }
-    .project-type{
-      display:inline-flex;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#f3e8d9;
-      color:var(--gold-dark);
-      font-size:11px;
-      font-weight:800;
-    }
-    .project-card h3{
-      margin:0 0 6px;
-      font-size:21px;
-    }
-    .project-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-      min-height:54px;
-    }
-    .project-link{
-      margin-top:16px;
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      font-weight:900;
-      color:var(--gold-dark);
-      text-decoration:none;
-    }
-    .project-link:hover{gap:10px}
-    .portfolio-more{
-      display:flex;
-      justify-content:center;
-      margin-top:30px;
-    }
-    @media (max-width:1100px){
-      .portfolio-grid{grid-template-columns:repeat(3,1fr)}
-    }
-    @media (max-width:800px){
-      .portfolio-grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:560px){
-      .portfolio-grid{grid-template-columns:1fr}
-      .project-shot{height:200px}
-      .project-browser{height:158px}
-    }
-
-  
-/* =========================================================
-   إعادة تصميم الجوال — 3 بطاقات في الصف
-   ========================================================= */
-@media screen and (max-width: 767px) {
-  body{overflow-x:hidden!important}
-  .container{width:calc(100% - 16px)!important}
-  section,.portfolio-section,.apps-section{padding:42px 0!important}
-  .section-head{margin-bottom:22px!important}
-  .section-head h2{font-size:28px!important;line-height:1.35!important;letter-spacing:-.5px!important}
-  .section-head p{font-size:14px!important;line-height:1.75!important}
-
-  .portfolio-grid{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:7px!important;
-    align-items:stretch!important;
-  }
-  .project-card{
-    min-width:0!important;
-    border-radius:14px!important;
-    box-shadow:0 8px 20px rgba(68,45,24,.08)!important;
-    overflow:hidden!important;
-  }
-  .project-shot{height:72px!important;min-height:72px!important;padding:5px!important}
-  .project-browser{height:62px!important;border-radius:8px 8px 0 0!important}
-  .project-browser-top{height:11px!important;padding:0 4px!important;gap:3px!important}
-  .project-browser-top i{width:3px!important;height:3px!important}
-  .project-browser-body{padding:4px!important}
-  .project-browser-hero{height:27px!important;border-radius:5px!important;font-size:7px!important;padding:0 2px!important}
-  .project-browser-lines{margin-top:3px!important;gap:2px!important}
-  .project-browser-lines span{height:10px!important;border-radius:3px!important}
-  .project-content{padding:8px 6px 9px!important}
-  .project-meta{display:block!important;margin-bottom:3px!important}
-  .project-meta small{display:none!important}
-  .project-type{font-size:7px!important;padding:2px 5px!important;line-height:1.4!important}
-  .project-card h3{
-    font-size:11px!important;line-height:1.35!important;margin:4px 0 3px!important;
-    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important
-  }
-  .project-card p{display:none!important}
-  .project-link{display:inline-flex!important;font-size:8px!important;line-height:1.3!important;margin-top:3px!important;gap:2px!important}
-
-  .services{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:7px!important;
-  }
-  .service{
-    min-width:0!important;
-    padding:11px 7px!important;
-    border-radius:14px!important;
-    box-shadow:0 8px 20px rgba(68,45,24,.07)!important;
-  }
-  .service .icon{
-    width:34px!important;height:34px!important;border-radius:10px!important;
-    font-size:15px!important;margin:0 auto 7px!important
-  }
-  .service h3{font-size:11px!important;line-height:1.35!important;text-align:center!important;margin:0 0 4px!important}
-  .service p,.service ul{display:none!important}
-  .service .text-link{display:block!important;text-align:center!important;font-size:8px!important;line-height:1.4!important;margin-top:5px!important}
-
-  .apps-grid{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:7px!important;
-    align-items:stretch!important;
-  }
-  .app-card,.app-card.featured{
-    min-width:0!important;width:auto!important;margin:0!important;padding:12px 7px!important;
-    border-radius:15px!important;transform:none!important
-  }
-  .app-card:before{width:80px!important;height:80px!important;top:-35px!important;left:-30px!important}
-  .app-badge{font-size:7px!important;padding:3px 5px!important;margin-bottom:6px!important;line-height:1.3!important}
-  .app-card h3{font-size:12px!important;line-height:1.35!important;margin:0 0 4px!important}
-  .app-card p{display:none!important}
-  .app-price{font-size:21px!important;line-height:1.1!important;letter-spacing:-.5px!important;margin:7px 0 8px!important;white-space:nowrap!important}
-  .app-price small{display:block!important;font-size:7px!important;margin-top:3px!important}
-  .app-list{margin:0 0 8px!important}
-  .app-list li{display:none!important}
-  .app-list li:nth-child(-n+3){
-    display:block!important;font-size:7px!important;line-height:1.45!important;padding:4px 9px 4px 0!important
-  }
-  .app-list li:before{font-size:7px!important}
-  .app-card .btn{width:100%!important;min-height:31px!important;padding:0 4px!important;border-radius:9px!important;font-size:7px!important;line-height:1.2!important}
-
-  .portfolio-section,#services,.apps-section{overflow:hidden!important}
-}
-@media screen and (max-width:380px){
-  .portfolio-grid,.services,.apps-grid{gap:5px!important}
-  .project-card h3,.service h3,.app-card h3{font-size:10px!important}
-  .app-price{font-size:18px!important}
-}
-
-
-/* =========================================================
-   استكمال تصميم الجوال — الباقات والتطبيقات 3 بطاقات في الصف
-   ========================================================= */
-@media screen and (max-width: 767px) {
-
-  /* شريط تبويبات الباقات */
-  .tabs{
-    display:grid !important;
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-    gap:5px !important;
-    width:100% !important;
-    padding:6px !important;
-    border-radius:18px !important;
-    overflow:visible !important;
-  }
-
-  .tab{
-    min-width:0 !important;
-    padding:8px 3px !important;
-    border-radius:11px !important;
-    font-size:9px !important;
-    line-height:1.35 !important;
-    white-space:normal !important;
-  }
-
-  /* باقات الإدارة والتأسيس والحملات والسوشيال */
-  .packages{
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    gap:7px !important;
-    align-items:stretch !important;
-  }
-
-  .package,
-  .package.featured{
-    min-width:0 !important;
-    width:auto !important;
-    margin:0 !important;
-    padding:12px 7px 10px !important;
-    border-radius:15px !important;
-    transform:none !important;
-    box-shadow:0 8px 22px rgba(68,45,24,.08) !important;
-  }
-
-  .package:before{
-    height:3px !important;
-  }
-
-  .package.featured:after{
-    display:none !important;
-  }
-
-  .pkg-kicker,
-  .pkg-tag{
-    font-size:7px !important;
-    line-height:1.35 !important;
-    margin-bottom:4px !important;
-  }
-
-  .pkg-kicker:before{
-    width:5px !important;
-    height:5px !important;
-  }
-
-  .package h3{
-    font-size:12px !important;
-    line-height:1.35 !important;
-    margin:3px 0 5px !important;
-  }
-
-  .price-wrap{
-    display:block !important;
-    padding:6px 0 8px !important;
-    margin:4px 0 6px !important;
-  }
-
-  .price{
-    font-size:22px !important;
-    line-height:1.1 !important;
-    letter-spacing:-.6px !important;
-    white-space:nowrap !important;
-  }
-
-  .price small{
-    font-size:7px !important;
-  }
-
-  .price-meta{
-    font-size:7px !important;
-    line-height:1.4 !important;
-    padding:3px 0 0 !important;
-  }
-
-  .package p{
-    display:none !important;
-  }
-
-  .package ul{
-    margin:0 0 8px !important;
-  }
-
-  .package li{
-    display:none !important;
-  }
-
-  .package li:nth-child(-n+3){
-    display:block !important;
-    font-size:7px !important;
-    line-height:1.45 !important;
-    padding:4px 9px 4px 0 !important;
-    border-bottom:1px solid #f1e6d7 !important;
-  }
-
-  .package li:before{
-    font-size:7px !important;
-  }
-
-  .package .btn{
-    width:100% !important;
-    min-height:31px !important;
-    padding:0 4px !important;
-    border-radius:9px !important;
-    font-size:7px !important;
-    line-height:1.2 !important;
-  }
-
-  /* قسم التطبيقات */
-  .apps-section .section-head h2{
-    font-size:28px !important;
-  }
-
-  .apps-grid{
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    gap:7px !important;
-    align-items:stretch !important;
-  }
-
-  .app-card,
-  .app-card.featured{
-    min-width:0 !important;
-    width:auto !important;
-    margin:0 !important;
-    padding:12px 7px 10px !important;
-    border-radius:15px !important;
-    transform:none !important;
-  }
-
-  .app-badge{
-    font-size:7px !important;
-    padding:3px 5px !important;
-    margin-bottom:6px !important;
-    line-height:1.35 !important;
-  }
-
-  .app-card h3{
-    font-size:12px !important;
-    line-height:1.35 !important;
-    margin:0 0 4px !important;
-  }
-
-  .app-card p{
-    display:none !important;
-  }
-
-  .app-price{
-    font-size:21px !important;
-    line-height:1.1 !important;
-    margin:7px 0 8px !important;
-    white-space:nowrap !important;
-  }
-
-  .app-price small{
-    display:block !important;
-    font-size:7px !important;
-    margin-top:3px !important;
-  }
-
-  .app-list{
-    margin:0 0 8px !important;
-  }
-
-  .app-list li{
-    display:none !important;
-  }
-
-  .app-list li:nth-child(-n+3){
-    display:block !important;
-    font-size:7px !important;
-    line-height:1.45 !important;
-    padding:4px 9px 4px 0 !important;
-  }
-
-  .app-list li:before{
-    font-size:7px !important;
-  }
-
-  .app-card .btn{
-    width:100% !important;
-    min-height:31px !important;
-    padding:0 4px !important;
-    border-radius:9px !important;
-    font-size:7px !important;
-    line-height:1.2 !important;
-  }
-
-  #packages,
-  .apps-section{
-    overflow:hidden !important;
-  }
-}
-
-
-/* =========================================================
-   اعتماد نهائي: جميع الباقات والخدمات والخيارات 3 جنب بعض
-   على الجوال والتابلت
-   ========================================================= */
-@media screen and (max-width: 900px) {
-  body #services .services,
-  body #packages .packages,
-  body #more .catalog,
-  body #apps .apps-grid,
-  body #portfolio .portfolio-grid,
-  body .why-grid,
-  body .steps {
-    display:grid !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    gap:7px !important;
-    align-items:stretch !important;
-  }
-
-  body #packages .package,
-  body #apps .app-card,
-  body #services .service,
-  body #more .catalog-card,
-  body #portfolio .project-card,
-  body .why-item,
-  body .step {
-    width:auto !important;
-    min-width:0 !important;
-    max-width:none !important;
-    margin:0 !important;
-    transform:none !important;
-  }
-
-  /* تبويبات الباقات: 4 خيارات بجانب بعضها */
-  body #packages .tabs{
-    display:grid !important;
-    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-    width:100% !important;
-    gap:5px !important;
-    padding:6px !important;
-    border-radius:17px !important;
-  }
-  body #packages .tab{
-    min-width:0 !important;
-    padding:8px 2px !important;
-    font-size:9px !important;
-    line-height:1.35 !important;
-    white-space:normal !important;
-    border-radius:10px !important;
-  }
-
-  /* بطاقات الباقات */
-  body #packages .package{
-    padding:11px 7px 9px !important;
-    border-radius:14px !important;
-  }
-  body #packages .package.featured:after{display:none !important}
-  body #packages .pkg-kicker,
-  body #packages .pkg-tag{font-size:7px !important}
-  body #packages .package h3{
-    font-size:11px !important;
-    line-height:1.35 !important;
-    margin:3px 0 5px !important;
-  }
-  body #packages .price-wrap{
-    display:block !important;
-    padding:5px 0 7px !important;
-    margin:3px 0 5px !important;
-  }
-  body #packages .price{
-    font-size:21px !important;
-    line-height:1.1 !important;
-    white-space:nowrap !important;
-  }
-  body #packages .price-meta{
-    font-size:7px !important;
-    padding-top:3px !important;
-  }
-  body #packages .package p{display:none !important}
-  body #packages .package li{display:none !important}
-  body #packages .package li:nth-child(-n+3){
-    display:block !important;
-    font-size:7px !important;
-    line-height:1.45 !important;
-    padding:4px 9px 4px 0 !important;
-  }
-  body #packages .package .btn{
-    min-height:30px !important;
-    padding:0 3px !important;
-    font-size:7px !important;
-    border-radius:8px !important;
-  }
-
-  /* الخدمات */
-  body #services .service{
-    padding:10px 7px !important;
-    border-radius:14px !important;
-  }
-  body #services .icon{
-    width:32px !important;
-    height:32px !important;
-    font-size:14px !important;
-    margin:0 auto 6px !important;
-    border-radius:9px !important;
-  }
-  body #services .service h3{
-    font-size:10px !important;
-    text-align:center !important;
-    line-height:1.35 !important;
-  }
-  body #services .service p,
-  body #services .service ul{display:none !important}
-  body #services .text-link{
-    display:block !important;
-    text-align:center !important;
-    font-size:7px !important;
-  }
-
-  /* الخدمات الإضافية */
-  body #more .catalog-card{
-    padding:10px 7px !important;
-    min-height:82px !important;
-    border-radius:13px !important;
-  }
-  body #more .catalog-card strong{
-    font-size:9px !important;
-    line-height:1.4 !important;
-  }
-  body #more .catalog-card span{
-    font-size:8px !important;
-  }
-
-  /* التطبيقات */
-  body #apps .app-card,
-  body #apps .app-card.featured{
-    padding:11px 7px 9px !important;
-    border-radius:14px !important;
-  }
-  body #apps .app-badge{
-    font-size:7px !important;
-    padding:3px 5px !important;
-  }
-  body #apps .app-card h3{
-    font-size:11px !important;
-    line-height:1.35 !important;
-  }
-  body #apps .app-card p{display:none !important}
-  body #apps .app-price{
-    font-size:20px !important;
-    white-space:nowrap !important;
-    margin:6px 0 8px !important;
-  }
-  body #apps .app-price small{
-    display:block !important;
-    font-size:7px !important;
-  }
-  body #apps .app-list li{display:none !important}
-  body #apps .app-list li:nth-child(-n+3){
-    display:block !important;
-    font-size:7px !important;
-    line-height:1.45 !important;
-    padding:4px 9px 4px 0 !important;
-  }
-  body #apps .app-card .btn{
-    min-height:30px !important;
-    padding:0 3px !important;
-    font-size:7px !important;
-    border-radius:8px !important;
-  }
-
-  /* الأعمال */
-  body #portfolio .project-shot{
-    height:68px !important;
-    padding:5px !important;
-  }
-  body #portfolio .project-browser{
-    height:58px !important;
-  }
-  body #portfolio .project-content{
-    padding:7px 5px 8px !important;
-  }
-  body #portfolio .project-card h3{
-    font-size:10px !important;
-    white-space:nowrap !important;
-    overflow:hidden !important;
-    text-overflow:ellipsis !important;
-  }
-  body #portfolio .project-card p,
-  body #portfolio .project-meta small{display:none !important}
-  body #portfolio .project-type{
-    font-size:7px !important;
-    padding:2px 4px !important;
-  }
-  body #portfolio .project-link{
-    font-size:7px !important;
-  }
-
-  /* لماذا مرسال وخطوات العمل */
-  body .why-item,
-  body .step{
-    padding:10px 7px !important;
-    border-radius:13px !important;
-  }
-  body .why-item b,
-  body .step h3{
-    font-size:10px !important;
-    line-height:1.35 !important;
-  }
-  body .why-item span,
-  body .step p{
-    font-size:7px !important;
-    line-height:1.45 !important;
-  }
-  body .step em{
-    width:30px !important;
-    height:30px !important;
-    font-size:9px !important;
-  }
-
-  body #packages,
-  body #services,
-  body #more,
-  body #apps,
-  body #portfolio{
-    overflow-x:hidden !important;
-  }
-}
-
-</style>
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#top"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAKgAgAEAAAAAQAAAVigAwAEAAAAAQAAAN4AAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/iAihJQ0NfUFJPRklMRQABAQAAAhhhcHBsBAAAAG1udHJSR0IgWFlaIAfmAAEAAQAAAAAAAGFjc3BBUFBMAAAAAEFQUEwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmRlc2MAAAD8AAAAMGNwcnQAAAEsAAAAUHd0cHQAAAF8AAAAFHJYWVoAAAGQAAAAFGdYWVoAAAGkAAAAFGJYWVoAAAG4AAAAFHJUUkMAAAHMAAAAIGNoYWQAAAHsAAAALGJUUkMAAAHMAAAAIGdUUkMAAAHMAAAAIG1sdWMAAAAAAAAAAQAAAAxlblVTAAAAFAAAABwARABpAHMAcABsAGEAeQAgAFAAM21sdWMAAAAAAAAAAQAAAAxlblVTAAAANAAAABwAQwBvAHAAeQByAGkAZwBoAHQAIABBAHAAcABsAGUAIABJAG4AYwAuACwAIAAyADAAMgAyWFlaIAAAAAAAAPbVAAEAAAAA0yxYWVogAAAAAAAAg98AAD2/////u1hZWiAAAAAAAABKvwAAsTcAAAq5WFlaIAAAAAAAACg4AAARCwAAyLlwYXJhAAAAAAADAAAAAmZmAADypwAADVkAABPQAAAKW3NmMzIAAAAAAAEMQgAABd7///MmAAAHkwAA/ZD///ui///9owAAA9wAAMBu/8AAEQgA3gFYAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAgICAgICAwICAwQDAwMEBQQEBAQFBwUFBQUFBwgHBwcHBwcICAgICAgICAoKCgoKCgsLCwsLDQ0NDQ0NDQ0NDf/bAEMBAgICAwMDBgMDBg0JBwkNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDf/dAAQAFv/aAAwDAQACEQMRAD8A/eyiiivDOgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//0P3sooorwzoCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9H97KKKK8M6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//S/eyiiivDOgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//0/3sooorwzoCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9T97KKKK8M6AooooAKKKKACiiigAooooAKK5nxj4r03wR4du/E2rJLJaWYQyLAoaQ73VBgMVHVh3HFcB8P/AI5eEPiRrcmg6Fb30VxHbvclrmJETYjKpGVkc5yw7VjKvTjNU5PVm0MPUlB1IrRdT2WivNPiN8VPDvwwhsZvEEN3KuoNKsX2VEcgxBS27c6Y+8MdatfDv4k6D8TNNudU0CK5iitZ/s7i6RUYttDcBXcYww70fWKftPZc3vdg+r1PZ+1t7vc9BooorYxCiiigAooooAKKKKACiiigAoorzn4o+MNZ8B+F5PE2k6amqJayL9qiZyhSFuPMGA2QrYBGOhz0BqKk1CLnLZF06bnJQjuz0aivhj/hr/UicDw3Cf8At5b/AOIrftP2lvG19ALq28EO1uf+W7SyJCPrI0YQfia4Y5rhpaKX4P8AyO+WU4mPxL8UfZFFfEt9+1fr2mzGC98LwowJAIuy6Nt4JV1Qqw91JFUv+GwNS/6FuD/wJb/4ik82wqdnL8H/AJFLJsW9VH8Ufc9FfL3wu+PniD4l+KI9BtvD8NvbojTXVz57MIYl742jJZiFAz3z0Br6hrsoYiFaPPTd0cWIw1ShLkqbhRRRWxgFFFFABRRRQAUUUUAFFFFABRRRQB//1f3sooorwzoCiiigAooooAKKK5/xZrMvh3wzquvQRCaTT7Sa5WNiQHMSlsEjnBxSk0ldjjFyaSOgor5L+GP7RusePfGlj4Xu9HtrWK7EpMscjsy+XGzjAPHOMV9aVjh8TTrx56bujfE4WpQlyVFZni37QvPwh17/AHbf/wBKI6+UP2UP+SlXX/YJn/8ARsNfV/7Q3/JIde/3bf8A9KI6+UP2Tx/xcq6PppM//o2GvGxv/Ixpei/NntYH/kXVfn+SPS/2wv8AkH+GP+u17/6DDWz+yJ/yJ2tf9hP/ANox1jfthf8AIO8Mf9dr3/0GGsj9mbx94N8JeGNUsvEmrW+nzz3/AJkaTEgsnlIM8A8ZBFTzRjmjcnbT9CoxcsqSiru/6n3JRXmX/C5vhb/0Mtj/AN9n/Cj/AIXL8Lf+hlsf++z/AIV7n1il/MvvPB+r1f5X9zPTaK8y/wCFzfC3/oZbH/vs/wCFH/C5fhb/ANDLY/8AfZ/wo+sUv5l94fV6v8r+5nptFecQfF/4Y3MywQ+JLAu5AUGXaCT7nAr0VHSRFkjYMrAEEHIIPQg1cakZfC7kTpyj8SsQ3N5aWUYlvJ44EJ2hpXCDPpkkc0y11Cwvt32K5huNmN3lSK+M9M4JxXzT+1kSPh5Y4OD/AGrF/wCipa8f/Zj8d+FfCI16LxPqcWnm6NsYTMTh9m/dggHpkVw1MwUMSsPJad7noU8uc8K8RF69rH3T4g17TfDGjXevavKIbSyjMsjHrgdAPVieAO5NfBnin9qzxpfXsg8LwW2mWat+7MkYnmZfVi3yjPXAXj1PWuu/aQ+LXhfxD4XtvC3hXUUv3uLlZrpoM+WsUQJVSSBklyDgenPavPP2cdL+G+p6rqq+OhaSXCRR/Yor1gsJUlvNI3EKWHy4zzjOK8/G4ypUxCw9Cdl38/U9DA4KnSw7xOIhd9j0b4b/ALUt7eapb6P4+ggWG4ZY1v4AY/LZuAZUyQVz1K4x1wa+0L2ztdRs57C9jWe2uY2iljcZV0cYZSO4INfkx8VLXwtZePtWtvBjI2kpKvk+Ud0YYopkCHuofIHb04r9R/Ar3Engnw9JeFjO+lWTSlvvFzCm7Oe+a3yrE1JynRqu9uphm2FpU1CtSVubofn8/hm5+FPxYufDc3mG1vUP2OZSVllgLiWNUZdpDyGPyGIxyx7V9I/Db4c6T4w0065rGqXb39tcz2tylo0dsu+JiAfMhRZWDptYZfoa6H4+eAZ/FfhePXtFUrrfh5/tlqyffdEwzoPf5Qy9eVwOteNfCP41eGtAm1ye+L21s9j9r+zHGVmtmMKRof4meHyx9VJNPDU6OGxPsq3wO7V/66F1KtXE4f2tL4lo/wCvM9I+LXwLt7vwjLb/AA90m1k1NpVknmupGlu3iXJKxSyliGZsZywBGRX55anpGqaLfyaZq1rLaXcTbXhmQo4P0Pr2Nfrb4D+Kfg74i2om0C8H2gDMtnLhJ4/qvce65Fa3iTwj4Y8S3NpNrWnQXdxZSpPDK6jfGyMGGG64JHI6Eda68xyehiorEYeSX5GOCzarhW6NeN/zPLvgJ8OR4B8GRS3se3VdWC3N3kfMikfu4ugPyKckf3ia9xoorpo0o0oKnDZHl1q0qs3UluwooorUyCiiigAooooAKKKKACiiigAooooA/9b97KKKK8M6AooooAKKKKACs/VtNt9Z0u80i7BMN7BJbyY67ZVKnH4GtCik1dWY02ndH5MeIPD3jP4OeMQ6+bZ3VnIz2d4i5jlQ5AZSQVIKnBB+hrpP+GjPi5/0GF/8Bof/AIiv011DTNN1a3NrqlrDeQnkxzxrIv5MCK5Y/DT4enk+G9L/APASL/4mvBeUVoNqhUsvmfQLOaM0niKV2uuh+afib4xfEbxnpb6DreptcWc7KXhSKNN5QhlB2KCcEA4zX1T+zB8MtU8Ow3njXXoGtp9QgFvZwyAq4gLB3dlPTeVXbnnAJ6EV9IWPgbwXpc63WnaFp1vMhyskdtGrKfUELkV1Vb4XK5QqqtXnzNbHPi81jOk6NCHKnueZfFb4bWXxO8MnRp5fs11BJ59pcYz5coBGGHUowOCB7HtXxDcfsvfFSKdo4YLKdFJAkW5VQw9cNg/mK/SuiunFZbRry55rXyObC5nXw8eSD08z8zv+GY/iz/z5Wn/gXH/jR/wzH8Wf+fK0/wDAuP8Axr9MaK5v7Dw3n9//AADq/t7E+R+Z3/DMfxZ/58rT/wAC4/8AGj/hmP4s/wDPlaf+Bcf+NfpjRR/YeG8/v/4Af29ifI/Ifxz8OPE/w6ntLbxPHBFLeq7xJFMsrbUIBLBegJPGeuD6V9g6B4p8S+G/2W4fEdlcvHqNqm23lkUSFYjfeUow4II8s4X2xivTPiL8DPDXxL1yLXtbvb2GaG2S1RLdkCBEZ3B+ZGOSXOea9F0/wloll4Ws/B89ul7p1nbQ2wjuUVxIsAUKXGNpbKhjx15rLDZZOlVqODsmml/ma4rNIVqVNTV2mm/8j8z7rxL8UvjXf2Xhy5nl1Rkk3RxJEscUZPBkcooAAHdugrvdZ/ZV+IlndbNIks9QgIBEnm+Sw9QVf0PoTX6C6XoejaJEYNGsLaxjbkrbxLED9doGa1KuGSwkm68nKXciedzi0sPFRj2PjP4efstRW1reT/ECVJZ7iB4YILZiRAzjHml8AF1/hGCo757ePeJv2Z/iRo19JFpFsmr2m4+XNBIqMV7bkdgQfXGR71+ltFazybDSgopWt16mNPOsTGbm3e/TofAnw2/Zg8Q3Wqwaj49VLLT4HDtaK4kmn287SVJVVPc5zjoO4++lVUUIgAVRgAcAAUtFdeEwdPDx5afU5MXjamJlzVAIzwa/Mf8AaC+HH/CDeMXvtPj2aVrBa4t9owscmf3kXoME5A/ukelfpxXnHxV8B23xD8G3mhuALpR51nIf4LhAdv4N90+xrHMsJ9YouK3WxtlmM+r1k3s9GflX4fGsvrVnF4ekmj1GWZEtmgYpJ5jHA2leRzX7AeG7LU9O0Kxs9au2v7+KBFubhsZklA+Y8ADGeBx0685r46/Zk+FtzDqt5408QWzRNp8klnZxSLgidfllfH+x90e5PpX3BXHkeFlTpOcuvQ688xUalRU4dOoUUUV7h4YUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9f97KKKK8M6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAaiJGCEUKCSSAMcnqfxp1FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9D97KKKK8M6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//R/eyiiivDOgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//0v3sooorwzoCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9P97KKKK8M6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//U/eyiiivDOgKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//2Q==" alt="شعار مرسال"></a>
-      <nav class="navlinks">
-        <a href="#portfolio">أعمالنا</a>
-        <a href="#services">الخدمات</a>
-        <a href="#packages">الباقات</a>
-        <a href="#more">خدمات إضافية</a>
-        <a href="#apps">التطبيقات</a>
-        <a href="#why">لماذا مرسال؟</a>
-      </nav>
-      <a class="btn btn-primary" href="https://wa.me/966531587416?text=مرحباً، أرغب في الاستفسار عن خدمات مرسال">تحدث معنا عبر واتساب</a>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#top"><span class="brand-mark">م</span><span>مرسال</span></a>
+    <nav class="nav-links">
+      <a href="#work">أعمالنا</a><a href="#services">الخدمات</a><a href="#packages">الباقات</a>
+      <a href="#extra">الخدمات الإضافية</a><a href="#apps">التطبيقات</a><a href="#why">لماذا مرسال؟</a>
+    </nav>
+    <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=مرحبًا%20مرسال،%20أرغب%20في%20بدء%20مشروعي">ابدأ مشروعك</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="kicker">نحوّل الأفكار إلى متاجر جاهزة للبيع</span>
+      <h1>نبني متجرك، نديره، <span>وننمي مبيعاته.</span></h1>
+      <p>حلول تقنية وتسويقية متكاملة لأصحاب المتاجر الإلكترونية، من التأسيس والتشغيل إلى الحملات والتحليلات والتطبيقات.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#services">استعرض الخدمات</a>
+        <a class="btn btn-light" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=مرحبًا،%20أحتاج%20ترشيح%20الخدمة%20المناسبة">رشّح لي الخدمة</a>
+      </div>
+      <div class="proof">
+        <div><b>10+</b>سنوات خبرة</div>
+        <div><b>26+</b>علامة تجارية</div>
+        <div><b>سعودي</b>فريق متخصص</div>
+      </div>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">كل خدمات متجرك في مكان واحد</span>
-          <h1>نبني متجرك، نديره، ونساعدك على زيادة مبيعاته.</h1>
-          <p>حلول متكاملة لأصحاب المتاجر الإلكترونية: من التأسيس والتشغيل إلى الإعلانات، السوشيال ميديا، SEO، أدوات Google والتطبيقات.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#services">استعرض الخدمات</a>
-            <a class="btn btn-light" href="https://wa.me/966531587416?text=مرحباً، أحتاج ترشيح الخدمة المناسبة لمتجري">رشّح لي الخدمة المناسبة</a>
-          </div>
-          <div class="proof">
-            <div><b>10+</b> سنوات خبرة</div>
-            <div><b>26+</b> علامة تجارية</div>
-            <div><b>فريق سعودي</b> متخصص</div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="float-card float-a">متجر جاهز للبيع ✓</div>
-          <div class="screen">
-            <div class="screen-top"><i></i><i></i><i></i></div>
-            <div class="screen-body">
-              <div class="screen-hero"></div>
-              <div class="mini-grid"><span></span><span></span><span></span></div>
-            </div>
-          </div>
-          <div class="float-card float-b">نتائج أوضح • نمو أفضل</div>
+    <div class="hero-art">
+      <div class="float a">متجر جاهز للبيع ✓</div>
+      <div class="dashboard">
+        <div class="dash-top"><i></i><i></i><i></i></div>
+        <div class="dash-body">
+          <div class="chart"><small>نمو المبيعات</small><strong>+38%</strong><div class="bars"><i style="height:28%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:66%"></i><i style="height:78%"></i><i style="height:94%"></i></div></div>
+          <div class="metric-stack"><div class="metric"><span>الطلبات</span><b>184</b></div><div class="metric"><span>التحويل</span><b>3.2%</b></div></div>
         </div>
       </div>
-    </section>
+      <div class="float b">تقارير وبيانات واضحة</div><div class="float c">● طلب جديد</div>
+    </div>
+  </div>
+</section>
 
+<section class="section soft" id="work">
+  <div class="container">
+    <div class="section-head"><span class="kicker">أعمال نفتخر بها</span><h2>متاجر وعلامات عملنا عليها</h2><p>مشاريع متنوعة في القهوة والأزياء والتعليم والعطور والمنتجات الغذائية.</p></div>
+    <div class="grid work-grid" id="workGrid"></div>
+  </div>
+</section>
 
-    <section class="portfolio-section" id="portfolio">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">أعمال نفتخر بها</span>
-          <h2>متاجر وعلامات عملنا عليها</h2>
-          <p>مشاريع متنوعة في القهوة، الأزياء، التعليم، العطور والمنتجات الغذائية.</p>
-        </div>
-        <div class="portfolio-grid">
-          
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">محمصة عتيق</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">قهوة مختصة</span>
-              <small>atiqq.com</small>
-            </div>
-            <h3>محمصة عتيق</h3>
-            <p>متجر قهوة مختصة بهوية دافئة وتجربة شراء مرتبة.</p>
-            <a class="project-link" href="https://atiqq.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">Health & Coffee</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">صحة وقهوة</span>
-              <small>healthandcofe.com</small>
-            </div>
-            <h3>Health & Coffee</h3>
-            <p>تنظيم تجربة المنتجات والبكجات وربط الهوية بالمحتوى.</p>
-            <a class="project-link" href="https://healthandcofe.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">20G Roastery</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">قهوة مختصة</span>
-              <small>20groastry.com</small>
-            </div>
-            <h3>20G Roastery</h3>
-            <p>واجهة واضحة لعرض المحاصيل والمنتجات الخاصة بالمحمصة.</p>
-            <a class="project-link" href="https://20groastry.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">الواحة</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">منتجات طبيعية</span>
-              <small>alowah.com</small>
-            </div>
-            <h3>الواحة</h3>
-            <p>متجر بهوية هادئة يعرض المنتجات بطريقة نظيفة ومقنعة.</p>
-            <a class="project-link" href="https://alowah.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">لافينا</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">أزياء وفساتين</span>
-              <small>lavina0.com</small>
-            </div>
-            <h3>لافينا</h3>
-            <p>تجربة عرض فاخرة للفساتين والمناسبات مع تركيز على الصور.</p>
-            <a class="project-link" href="https://lavina0.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">Tradylo</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">تجارة إلكترونية</span>
-              <small>tradylo-sa.com</small>
-            </div>
-            <h3>Tradylo</h3>
-            <p>تطوير واجهة متجر وتجربة تصفح وشراء عملية.</p>
-            <a class="project-link" href="https://tradylo-sa.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">أكاديمية الزرقاء</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">تعليم وتدريب</span>
-              <small>alzrqaa.com</small>
-            </div>
-            <h3>أكاديمية الزرقاء</h3>
-            <p>تنظيم البرامج التعليمية وصفحات التسجيل والدفع.</p>
-            <a class="project-link" href="https://alzrqaa.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">Lorena</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">أزياء</span>
-              <small>lorena1.com</small>
-            </div>
-            <h3>Lorena</h3>
-            <p>واجهة عصرية لعرض المنتجات وهوية العلامة.</p>
-            <a class="project-link" href="https://lorena1.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">رواق</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">قهوة مختصة</span>
-              <small>ruaq-1.com</small>
-            </div>
-            <h3>رواق</h3>
-            <p>حضور رقمي يعكس هوية القهوة وتجربة المنتج.</p>
-            <a class="project-link" href="https://ruaq-1.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">Gourmand</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">عطور</span>
-              <small>gourmand-perfumes.com</small>
-            </div>
-            <h3>Gourmand</h3>
-            <p>عرض فاخر لمنتجات العطور مع تركيز على الهوية.</p>
-            <a class="project-link" href="https://gourmand-perfumes.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        <article class="project-card">
-          <div class="project-shot">
-            <div class="project-browser">
-              <div class="project-browser-top"><i></i><i></i><i></i></div>
-              <div class="project-browser-body">
-                <div class="project-browser-hero">الجود للحوم</div>
-                <div class="project-browser-lines"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-meta">
-              <span class="project-type">منتجات غذائية</span>
-              <small>aljoodmeats.com</small>
-            </div>
-            <h3>الجود للحوم</h3>
-            <p>متجر غذائي واضح يسهل اكتشاف المنتجات والطلب.</p>
-            <a class="project-link" href="https://aljoodmeats.com/" target="_blank" rel="noopener">زيارة المتجر ←</a>
-          </div>
-        </article>
-    
-        </div>
-        <div class="portfolio-more">
-          <a class="btn btn-light" href="https://wa.me/966531587416?text=مرحباً، أرغب في تنفيذ مشروع مشابه" target="_blank" rel="noopener">أريد مشروعًا مشابهًا</a>
-        </div>
-      </div>
-    </section>
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head"><span class="kicker">الخدمات الرئيسية</span><h2>كل ما يحتاجه متجرك في مكان واحد</h2><p>نبدأ من احتياجك الحقيقي ونبني الحل المناسب لمرحلة مشروعك.</p></div>
+    <div class="grid service-grid">
+      <article class="card service-card"><div class="service-icon">🏪</div><h3>تأسيس المتاجر</h3><p>متجر مرتب وسريع وجاهز لاستقبال أول طلب.</p><ul class="checks"><li>تصميم الواجهة</li><li>الدفع والشحن</li><li>رفع المنتجات</li><li>الصفحات والأقسام</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">⚙️</div><h3>إدارة المتاجر</h3><p>تشغيل وتحسين مستمر للمنتجات والعروض والطلبات.</p><ul class="checks"><li>إدارة المنتجات</li><li>العروض والكوبونات</li><li>تحسين تجربة العميل</li><li>تقارير دورية</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">📈</div><h3>الحملات الإعلانية</h3><p>حملات مدروسة للوصول إلى العملاء وقياس النتائج.</p><ul class="checks"><li>Google وMeta</li><li>TikTok وSnapchat</li><li>اختبار الجماهير</li><li>تحسين الأداء</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">📱</div><h3>السوشيال ميديا</h3><p>محتوى مستمر يعزز الثقة ويجهز العميل للشراء.</p><ul class="checks"><li>تصاميم احترافية</li><li>مقاطع قصيرة</li><li>كتابة المحتوى</li><li>النشر والمتابعة</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">🔎</div><h3>SEO وخدمات Google</h3><p>تهيئة المتجر للبحث وربط أدوات القياس والتحليل.</p><ul class="checks"><li>SEO المتجر</li><li>Analytics وGTM</li><li>Merchant Center</li><li>البكسلات</li></ul><a class="link" href="#extra">عرض الخدمات ←</a></article>
+      <article class="card service-card"><div class="service-icon">✨</div><h3>التصميم والتطبيقات</h3><p>واجهات وهوية وتطبيقات تدعم توسع مشروعك.</p><ul class="checks"><li>UI/UX</li><li>تصميم المحتوى</li><li>تطبيقات iOS وAndroid</li><li>لوحات التحكم</li></ul><a class="link" href="#apps">عرض الباقات ←</a></article>
+    </div>
+  </div>
+</section>
 
+<section class="section soft" id="packages">
+  <div class="container">
+    <div class="section-head"><span class="kicker">باقات مرسال</span><h2>اختر الباقة المناسبة</h2><p>باقات واضحة حسب احتياج مشروعك، مع إمكانية تخصيص النطاق.</p></div>
+    <div class="tabs-wrap"><div class="tabs" id="tabs"></div></div>
+    <div class="grid three-grid" id="packageGrid"></div>
+  </div>
+</section>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">الخدمات الرئيسية</span>
-          <h2>رحلة متكاملة لنمو متجرك</h2>
-          <p>اختر المرحلة التي يحتاجها متجرك، أو تواصل معنا لنرشّح لك الحل الأنسب.</p>
-        </div>
-        <div class="services">
-          <article class="service">
-            <div class="icon">🏪</div>
-            <h3>تأسيس المتاجر</h3>
-            <p>نؤسس متجرك من البداية ونجهزه للبيع باحتراف.</p>
-            <ul><li>تصميم الواجهة</li><li>الدفع والشحن</li><li>الصفحات والأقسام</li><li>رفع المنتجات</li></ul>
-            <a class="text-link" href="#packages" data-open="setup">عرض باقات التأسيس ←</a>
-          </article>
-          <article class="service">
-            <div class="icon">⚙️</div>
-            <h3>إدارة المتاجر</h3>
-            <p>نتابع التشغيل والتحديث والتحسين المستمر لمتجرك.</p>
-            <ul><li>إدارة المنتجات</li><li>العروض والكوبونات</li><li>تحسين تجربة العميل</li><li>تقارير دورية</li></ul>
-            <a class="text-link" href="#packages" data-open="management">عرض باقات الإدارة ←</a>
-          </article>
-          <article class="service">
-            <div class="icon">📈</div>
-            <h3>الحملات الإعلانية</h3>
-            <p>حملات مدروسة للوصول إلى العملاء وقياس النتائج.</p>
-            <ul><li>Google وMeta</li><li>TikTok وSnapchat</li><li>اختبار الجماهير</li><li>تحسين الأداء</li></ul>
-            <a class="text-link" href="#packages" data-open="ads">عرض باقات الحملات ←</a>
-          </article>
-          <article class="service">
-            <div class="icon">📱</div>
-            <h3>إدارة السوشيال ميديا</h3>
-            <p>محتوى احترافي يخدم منتجاتك ويقوي حضور علامتك.</p>
-            <ul><li>خطط محتوى</li><li>تصاميم وفيديوهات</li><li>جدولة ونشر</li><li>تقارير وتطوير</li></ul>
-            <a class="text-link" href="#packages" data-open="social">عرض باقات السوشيال ←</a>
-          </article>
-          <article class="service">
-            <div class="icon">🔍</div>
-            <h3>SEO وخدمات Google</h3>
-            <p>نحسن ظهور متجرك ونربطه بأدوات القياس والتسويق.</p>
-            <ul><li>SEO المتجر والمنتجات</li><li>Merchant Center</li><li>Google Ads وTags</li><li>Analytics والتتبع</li></ul>
-            <a class="text-link" href="#more">استعرض الخدمات ←</a>
-          </article>
-          <article class="service">
-            <div class="icon">✨</div>
-            <h3>التصميم والتطبيقات</h3>
-            <p>واجهات وصفحات وتطبيقات تناسب هوية مشروعك.</p>
-            <ul><li>إعادة تصميم الواجهة</li><li>صفحة روابط</li><li>تطبيقات الجوال</li><li>محتوى المنتجات</li></ul>
-            <a class="text-link" href="#more">استعرض الخدمات ←</a>
-          </article>
-        </div>
-      </div>
-    </section>
+<section class="section" id="extra">
+  <div class="container">
+    <div class="section-head"><span class="kicker">خدمات إضافية</span><h2>خدمات سريعة لمتجرك</h2><p>اطلب الخدمة مباشرة عبر واتساب.</p></div>
+    <div class="grid extra-grid" id="extraGrid"></div>
+  </div>
+</section>
 
-    <section id="packages">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">الباقات</span>
-          <h2>اختر الباقة المناسبة</h2>
-          <p>الأسعار الموضحة لرسوم الخدمة، وميزانية الإعلانات لا تدخل ضمن رسوم الإدارة.</p>
-        </div>
-        <div class="tabs">
-          <button class="tab active" data-tab="setup">تأسيس المتاجر</button>
-          <button class="tab" data-tab="management">إدارة المتاجر</button>
-          <button class="tab" data-tab="ads">الحملات الإعلانية</button>
-          <button class="tab" data-tab="social">السوشيال ميديا</button>
-        </div>
-        <div id="packageGrid" class="packages"></div>
-      </div>
-    </section>
+<section class="section dark" id="apps">
+  <div class="container">
+    <div class="section-head"><span class="kicker">تطوير التطبيقات</span><h2>باقات إنشاء التطبيقات</h2><p>الأسعار التالية خاصة بتطبيقات الجوال وليست باقات المتاجر الإلكترونية.</p></div>
+    <div class="grid three-grid">
+      <article class="card app-card"><span class="app-badge">مناسب لاختبار الفكرة</span><h3>التطبيق الأساسي</h3><p>نسخة MVP عملية وسريعة.</p><div class="app-price">12,000 <small>ريال</small></div><ul class="checks"><li>5 إلى 7 شاشات</li><li>تصميم جاهز معدل</li><li>تشغيل بسيط</li><li>النشر على متجر واحد</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=أرغب%20في%20التطبيق%20الأساسي">اطلب الباقة</a></article>
+      <article class="card app-card featured"><span class="app-badge">الأكثر طلبًا</span><h3>التطبيق المتوسط</h3><p>واجهات مخصصة ولوحة تحكم وقابلية للنمو.</p><div class="app-price">22,000 <small>ريال</small></div><ul class="checks"><li>حتى 15 شاشة</li><li>UI/UX مخصص</li><li>قاعدة بيانات</li><li>لوحة تحكم</li><li>iOS وAndroid</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=أرغب%20في%20التطبيق%20المتوسط">ابدأ الآن</a></article>
+      <article class="card app-card"><span class="app-badge">للشركات والمشاريع الكبيرة</span><h3>التطبيق المتقدم</h3><p>نظام رقمي متكامل بخصائص متقدمة.</p><div class="app-price">39,000 <small>ريال</small></div><ul class="checks"><li>تصميم من الصفر</li><li>ربط دفع وخرائط</li><li>نظام عضويات</li><li>تقارير ذكية</li><li>دعم 3 أشهر</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=أرغب%20في%20التطبيق%20المتقدم">تواصل معنا</a></article>
+    </div>
+  </div>
+</section>
 
-    <section id="more">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">خدمات متخصصة</span>
-          <h2>كل ما يحتاجه متجرك</h2>
-          <p>خدمات مستقلة يمكن طلبها مباشرة عبر واتساب.</p>
-        </div>
-        <div class="catalog">
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في إعادة تصميم واجهة متجري"><strong>إعادة تصميم واجهة المتجر</strong><span>900 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في ربط متجري مع Google Merchant Center"><strong>Google Merchant Center</strong><span>399 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في حجز دومين وربطه بمتجري"><strong>حجز وربط دومين</strong><span>130 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في تحليل متجري وكشف نقاط القوة والضعف"><strong>تحليل المتجر والتوصيات</strong><span>150 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في خدمة SEO للمتجر والمنتجات"><strong>SEO المتجر والمنتجات</strong><span>1,900 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في كتابة وصف لمنتجاتي"><strong>كتابة وصف المنتجات</strong><span>20 ريال / منتج</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في كتابة الصفحات التعريفية"><strong>الصفحات التعريفية</strong><span>99 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في تعديل أخطاء متجري الإلكتروني"><strong>تعديل أخطاء المتجر</strong><span>599 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في ربط Google Ads"><strong>ربط Google Ads</strong><span>199 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في ربط Google Tags"><strong>ربط Google Tags</strong><span>199 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في توثيق المركز السعودي للأعمال"><strong>توثيق المركز السعودي للأعمال</strong><span>89 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في تفعيل خاصية توثيق متجر سلة"><strong>خاصية توثيق متجر سلة</strong><span>50 ريال</span></a>
-          <a class="catalog-card" href="https://wa.me/966531587416?text=أرغب في تصميم صفحة تجمع روابط حساباتي"><strong>صفحة تجمع روابطك</strong><span>199 ريال</span></a>
-        </div>
-      </div>
-    </section>
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head"><span class="kicker">لماذا مرسال؟</span><h2>شريك تنفيذ يفهم التجارة الإلكترونية</h2><p>وضوح في النطاق، تنفيذ منظم، وقرارات مبنية على احتياج متجرك.</p></div>
+    <div class="grid why-grid">
+      <article class="card why-card"><b>10+</b><span>سنوات خبرة</span></article><article class="card why-card"><b>26+</b><span>علامة تجارية</span></article><article class="card why-card"><b>سعودي</b><span>فريق متخصص</span></article>
+      <article class="card why-card"><b>واضح</b><span>تقارير ونطاق عمل</span></article><article class="card why-card"><b>متكامل</b><span>تقنية وتسويق وإدارة</span></article><article class="card why-card"><b>مستمر</b><span>دعم وتحسين</span></article>
+    </div>
+  </div>
+</section>
 
+<section class="section soft">
+  <div class="container">
+    <div class="section-head"><span class="kicker">طريقة العمل</span><h2>من الاستشارة إلى الإطلاق</h2></div>
+    <div class="grid steps"><article class="card step"><em>1</em><h3>نفهم المشروع</h3><p>الهدف والسوق والاحتياج.</p></article><article class="card step"><em>2</em><h3>نحدد الأولويات</h3><p>خطة ونطاق واضح.</p></article><article class="card step"><em>3</em><h3>ننفذ</h3><p>تصميم وربط وتجهيز.</p></article><article class="card step"><em>4</em><h3>نطلق ونحسن</h3><p>قياس ودعم مستمر.</p></article></div>
+  </div>
+</section>
 
-    <section class="apps-section" id="apps">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">تطوير التطبيقات</span>
-          <h2>باقات إنشاء التطبيقات</h2>
-          <p>الأسعار الكبيرة أدناه تخص تطوير تطبيقات الجوال، وليست باقات المتاجر الإلكترونية.</p>
-        </div>
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="kicker">الأسئلة الشائعة</span><h2>قبل أن تبدأ</h2></div>
+    <div class="faq">
+      <details><summary>هل تقدمون خدمة واحدة أم حلولًا متكاملة؟</summary><p>يمكن تنفيذ خدمة مستقلة أو بناء نطاق متكامل حسب مرحلة المشروع.</p></details>
+      <details><summary>هل تعملون على منصة سلة؟</summary><p>نعم، ونعمل أيضًا على منصات ومتطلبات أخرى حسب طبيعة المشروع.</p></details>
+      <details><summary>هل الأسعار تشمل ميزانية الإعلان؟</summary><p>لا، أسعار إدارة الحملات لا تشمل ميزانية المنصات الإعلانية.</p></details>
+      <details><summary>كم تستغرق مدة التنفيذ؟</summary><p>تختلف حسب الباقة والنطاق، ويتم تحديدها بوضوح قبل البدء.</p></details>
+    </div>
+  </div>
+</section>
 
-        <div class="apps-grid">
-          <article class="app-card">
-            <span class="app-badge">مناسب لاختبار الفكرة</span>
-            <h3>التطبيق الأساسي</h3>
-            <p>بداية عملية لمشروع ناشئ أو نسخة MVP واضحة وسريعة.</p>
-            <div class="app-price">12,000 <small>ريال</small></div>
-            <ul class="app-list">
-              <li>من 5 إلى 7 شاشات أساسية</li>
-              <li>تصميم جاهز مع تعديلات الهوية</li>
-              <li>تشغيل بسيط وسهل الإدارة</li>
-              <li>النشر على متجر واحد</li>
-              <li>مناسب لاختبار الفكرة</li>
-            </ul>
-            <a class="btn" href="https://wa.me/966531587416?text=أرغب في باقة التطبيق الأساسي">اطلب الباقة</a>
-          </article>
+<section class="section"><div class="container cta"><div><h2>جاهز تبدأ؟</h2><p>تواصل معنا وسنرشح لك الخدمة أو الباقة الأنسب لمشروعك.</p></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=مرحبًا%20مرسال،%20أرغب%20في%20بدء%20مشروعي">ابدأ عبر واتساب</a></div></section>
+</main>
 
-          <article class="app-card featured">
-            <span class="app-badge">الأكثر طلبًا</span>
-            <h3>التطبيق المتوسط</h3>
-            <p>تطبيق احترافي بواجهات مخصصة ولوحة تحكم وقابلية للنمو.</p>
-            <div class="app-price">22,000 <small>ريال</small></div>
-            <ul class="app-list">
-              <li>حتى 15 شاشة</li>
-              <li>تصميم UI/UX مخصص</li>
-              <li>ربط قاعدة بيانات</li>
-              <li>لوحة تحكم لإدارة المحتوى</li>
-              <li>النشر على iOS وAndroid</li>
-              <li>دعم فني لمدة شهر</li>
-            </ul>
-            <a class="btn" href="https://wa.me/966531587416?text=أرغب في باقة التطبيق المتوسط">ابدأ الآن</a>
-          </article>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="#top"><span class="brand-mark">م</span><span style="color:white">مرسال</span></a><p>نحوّل الأفكار إلى متاجر جاهزة للبيع، ونساعدها على النمو.</p></div>
+      <div><h4>الخدمات</h4><div class="footer-links"><a href="#services">تأسيس المتاجر</a><a href="#services">إدارة المتاجر</a><a href="#services">الحملات</a><a href="#apps">التطبيقات</a></div></div>
+      <div><h4>روابط</h4><div class="footer-links"><a href="#work">أعمالنا</a><a href="#packages">الباقات</a><a href="#extra">الخدمات الإضافية</a><a href="#why">لماذا مرسال؟</a></div></div>
+      <div><h4>التواصل</h4><div class="footer-links"><a href="https://wa.me/966531587416">0531587416</a><span>المملكة العربية السعودية</span></div></div>
+    </div>
+    <div class="copy"><span>© 2026 مرسال. جميع الحقوق محفوظة.</span><span>شريكك في نمو متجرك.</span></div>
+  </div>
+</footer>
+<a class="wa" target="_blank" rel="noopener" href="https://wa.me/966531587416?text=مرحبًا%20مرسال">واتساب</a>
 
-          <article class="app-card">
-            <span class="app-badge">للشركات والمشاريع الكبيرة</span>
-            <h3>التطبيق المتقدم</h3>
-            <p>نظام رقمي متكامل بخصائص متقدمة وتقارير ودعم ممتد.</p>
-            <div class="app-price">39,000 <small>ريال</small></div>
-            <ul class="app-list">
-              <li>تصميم مخصص من الصفر</li>
-              <li>خصائص متقدمة وربط دفع وخرائط</li>
-              <li>نظام عضويات وصلاحيات</li>
-              <li>لوحة تحكم وتقارير ذكية</li>
-              <li>اختبارات أداء وأمان وتجربة مستخدم</li>
-              <li>دعم فني 3 أشهر + تدريب</li>
-            </ul>
-            <a class="btn" href="https://wa.me/966531587416?text=أرغب في باقة التطبيق المتقدم">تواصل معنا</a>
-          </article>
-        </div>
+<script>
+const wa = t => `https://wa.me/966531587416?text=${encodeURIComponent("مرحبًا مرسال، أرغب في " + t)}`;
 
-        <div class="apps-note">يتم تحديد الجدول الزمني النهائي بعد دراسة فكرة التطبيق ونطاق العمل.</div>
-      </div>
-    </section>
+const works = [
+["محمصة عتيق","قهوة مختصة","atiqq.com","https://atiqq.com/"],["Health & Coffee","صحة وقهوة","healthandcofe.com","https://healthandcofe.com/"],
+["20G Roastery","قهوة مختصة","20groastry.com","https://20groastry.com/"],["الواحة","منتجات طبيعية","alowah.com","https://alowah.com/"],
+["لافينا","أزياء وفساتين","lavina0.com","https://lavina0.com/"],["Tradylo","تجارة إلكترونية","tradylo-sa.com","https://tradylo-sa.com/"],
+["أكاديمية الزرقاء","تعليم وتدريب","alzrqaa.com","https://alzrqaa.com/"],["Lorena","أزياء","lorena1.com","https://lorena1.com/"],
+["رواق","قهوة مختصة","ruaq-1.com","https://ruaq-1.com/"],["Gourmand","عطور","gourmand-perfumes.com","https://gourmand-perfumes.com/"],
+["الجود للحوم","منتجات غذائية","aljoodmeats.com","https://aljoodmeats.com/"]
+];
+document.getElementById("workGrid").innerHTML = works.map(w=>`
+<article class="card work-card"><div class="work-shot"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-body"><div class="browser-hero">${w[0]}</div><div class="browser-lines"><span></span><span></span><span></span></div></div></div></div><div class="work-body"><div class="work-meta"><span class="tag">${w[1]}</span><small>${w[2]}</small></div><h3>${w[0]}</h3><p>تجربة متجر وهوية رقمية مناسبة لطبيعة النشاط.</p><a class="link" target="_blank" rel="noopener" href="${w[3]}">زيارة المتجر ←</a></div></article>`).join("");
 
+const packageSets = {
+setup:{label:"تأسيس المتاجر",cards:[
+["الأساسية","1,500","بداية اقتصادية واضحة",["إنشاء متجر سلة","رفع 10 منتجات","ربط دفع وشحن","إعداد الصفحات"]],
+["المتقدمة","2,800","متجر مرتب وجاهز للبيع",["كل ما في الأساسية","رفع 30 منتج","تحسين الأوصاف","SEO أولي"],true],
+["الشاملة","4,200","تأسيس كامل وانطلاقة أقوى",["هوية وواجهة متقدمة","رفع 60 منتج","إعداد البكسلات","خطة إطلاق"]]
+]},
+management:{label:"إدارة المتاجر",cards:[
+["الإدارة الأساسية","1,200","شهريًا",["متابعة أسبوعية","رفع أو تعديل 20 منتج","تحديث الأسعار","تقرير شهري"]],
+["إدارة النمو","2,400","شهريًا",["كل ما في الأساسية","حتى 50 منتج","تحسين الأوصاف","عروض وتقارير"],true],
+["الإدارة الشاملة","3,900","شهريًا",["متابعة شبه يومية","حتى 100 منتج","SEO وتحسين واجهة","اجتماع شهري"]]
+]},
+ads:{label:"الحملات الإعلانية",cards:[
+["تجربة السوق","1,500","شهريًا",["منصة إعلانية واحدة","حتى حملتين","اختبار جمهورين","تقرير أداء"]],
+["نمو المبيعات","2,900","شهريًا",["منصتان إعلانيتان","4 إلى 6 حملات","اختبارات متعددة","تحسين أسبوعي"],true],
+["أداء المتجر","4,500","شهريًا",["3 منصات","8 إلى 12 حملة","متابعة شبه يومية","تقارير أسبوعية"]]
+]},
+social:{label:"السوشيال ميديا",cards:[
+["حضور المتجر","1,200","شهريًا",["منصة واحدة","8 تصاميم","4 نصوص","جدولة ونشر"]],
+["نمو التفاعل","2,400","شهريًا",["منصتان","12 تصميم","4 ريلز","متابعة وتقارير"],true],
+["الإدارة الشاملة","3,900","شهريًا",["3 منصات","16 تصميم","8 ريلز","متابعة وتعليقات"]]
+]}
+};
 
-    <section id="why">
-      <div class="container why">
-        <div class="why-panel">
-          <div>
-            <div class="big">مرسال</div>
-            <p>لا نقدم خدمة منفصلة فقط؛ نساعدك على معرفة ما يحتاجه متجرك ثم ننفذه باحتراف.</p>
-          </div>
-        </div>
-        <div>
-          <div class="section-head" style="text-align:right;margin:0 0 25px">
-            <span class="eyebrow">لماذا مرسال؟</span>
-            <h2>شريك تقني وتسويقي لمتجرك</h2>
-          </div>
-          <div class="why-grid">
-            <div class="why-item"><b>خبرة عملية</b><span>خبرة في تأسيس وإدارة ونمو المتاجر.</span></div>
-            <div class="why-item"><b>حلول متكاملة</b><span>التأسيس، الإدارة، المحتوى، الإعلانات وGoogle.</span></div>
-            <div class="why-item"><b>تقارير واضحة</b><span>نوضح ما تم تنفيذه وما يحتاجه المتجر لاحقًا.</span></div>
-            <div class="why-item"><b>تواصل مباشر</b><span>تواصل سريع عبر واتساب ومتابعة واضحة.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+const tabs = document.getElementById("tabs");
+Object.entries(packageSets).forEach(([key,val],i)=>{
+  const b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.textContent=val.label;b.onclick=()=>renderPackages(key,b);tabs.appendChild(b);
+});
+function renderPackages(key,btn){
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+  document.getElementById("packageGrid").innerHTML=packageSets[key].cards.map(c=>`
+  <article class="card package-card ${c[4]?"featured":""}"><span class="package-kicker">${packageSets[key].label}</span><h3>${c[0]}</h3><div class="price">${c[1]} <small>ريال</small></div><p>${c[2]}</p><ul class="checks">${c[3].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn btn-primary" target="_blank" rel="noopener" href="${wa(c[0])}">اطلب عبر واتساب</a></article>`).join("");
+}
+renderPackages("setup",tabs.children[0]);
 
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">طريقة العمل</span>
-          <h2>أربع خطوات بسيطة</h2>
-        </div>
-        <div class="steps">
-          <div class="step"><em>1</em><b>تواصل معنا</b><p>أرسل رابط متجرك أو اشرح احتياجك.</p></div>
-          <div class="step"><em>2</em><b>نحدد الحل</b><p>نرشح لك الخدمة أو الباقة المناسبة.</p></div>
-          <div class="step"><em>3</em><b>نبدأ التنفيذ</b><p>ننفذ العمل حسب النطاق المتفق عليه.</p></div>
-          <div class="step"><em>4</em><b>التسليم والمتابعة</b><p>نسلمك العمل ونوضح التوصيات التالية.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container cta">
-        <div><h2>محتار أي خدمة تناسب متجرك؟</h2><p>أرسل رابط متجرك وسنساعدك على تحديد الخطوة الأهم.</p></div>
-        <a class="btn" href="https://wa.me/966531587416?text=مرحباً، هذا رابط متجري وأرغب في معرفة الخدمة الأنسب:">أرسل رابط متجرك</a>
-      </div>
-    </section>
-
-    <section>
-      <div class="container faq">
-        <div class="section-head"><span class="eyebrow">الأسئلة الشائعة</span><h2>قبل أن تبدأ</h2></div>
-        <details><summary>هل الأسعار تشمل ميزانية الإعلانات؟</summary><p>لا، أسعار باقات الحملات تشمل الإدارة فقط، وتُدفع ميزانية الإعلان للمنصة بشكل مستقل.</p></details>
-        <details><summary>هل الخدمات مخصصة لمتاجر سلة فقط؟</summary><p>التخصص الأساسي في متاجر سلة، ويمكن دراسة المشاريع على المنصات الأخرى حسب الخدمة المطلوبة.</p></details>
-        <details><summary>كيف أطلب الخدمة؟</summary><p>اضغط زر واتساب الموجود بجانب الخدمة، ثم أرسل تفاصيل متجرك واحتياجك.</p></details>
-        <details><summary>هل يمكن جمع أكثر من خدمة؟</summary><p>نعم، ويمكن تجهيز عرض موحد عند الحاجة إلى أكثر من خدمة أو باقة.</p></details>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container">© مرسال لخدمات المتاجر الإلكترونية — جميع الحقوق محفوظة.</div></footer>
-  <a class="wa-float" href="https://wa.me/966531587416?text=مرحباً، أرغب في الاستفسار عن خدمات مرسال">تواصل عبر واتساب</a>
-
-  <script>
-    const data = {
-      setup: [
-        {name:"التأسيس الأساسية", price:"1,500", tag:"بداية سريعة", desc:"مناسبة للمتجر الجديد الذي يريد بداية واضحة.", items:["إنشاء متجر على سلة","واجهة بسيطة ومرتبة","رفع حتى 10 منتجات","ربط الدفع وشركة شحن","الصفحات الأساسية","تدريب مختصر"]},
-        {name:"التأسيس المتقدمة", price:"2,800", tag:"الأكثر طلبًا", desc:"متجر احترافي وتجهيز أفضل للبيع.", items:["كل ما في الأساسية","واجهة احترافية","رفع حتى 30 منتجًا","تحسين أوصاف المنتجات","عروض وكوبونات","SEO أولي","دعم 7 أيام"]},
-        {name:"التأسيس الشاملة", price:"4,200", tag:"انطلاقة قوية", desc:"تأسيس متكامل مع تجهيز تسويقي.", items:["كل ما في المتقدمة","رفع حتى 60 منتجًا","تحسين الصور والأوصاف","بنرات احترافية","أدوات تتبع أساسية","خطة إطلاق مختصرة","دعم 14 يومًا"]}
-      ],
-      management: [
-        {name:"الإدارة الأساسية", price:"1,200", tag:"تشغيل أساسي", desc:"للمتاجر الصغيرة التي تحتاج متابعة وترتيب.", items:["متابعة أسبوعية","رفع أو تعديل 20 منتجًا","تحديث الأسعار والمخزون","ترتيب الأقسام","تحديث البنرات الأساسية","تقرير شهري"]},
-        {name:"إدارة النمو", price:"2,400", tag:"تحسين مستمر", desc:"لمتجر يريد تطوير المنتجات وتجربة العميل.", items:["كل ما في الأساسية","حتى 50 منتجًا","تحسين الأوصاف والصور","عروض وكوبونات","مراجعة الصفحات المهمة","تقرير نصف شهري وشهري"]},
-        {name:"الإدارة الشاملة", price:"3,900", tag:"إدارة متكاملة", desc:"إدارة شبه كاملة ومتابعة أداء مستمرة.", items:["متابعة شبه يومية","حتى 100 منتج","تحسين الواجهة وSEO","العروض الموسمية","متابعة مشاكل الدفع والشحن","تقارير أسبوعية وشهرية"]}
-      ],
-      ads: [
-        {name:"تجربة السوق", price:"1,500", tag:"اختبار المنتج", desc:"لبداية ذكية واختبار تجاوب السوق.", items:["منصة إعلانية واحدة","حتى حملتين شهريًا","3 نصوص إعلانية","3 أفكار محتوى","اختبار جمهورين","تقرير وتوصية نهائية"]},
-        {name:"نمو المبيعات", price:"2,900", tag:"زيادة الطلبات", desc:"لمتجر جاهز يريد حملات واختبارات أوسع.", items:["إدارة منصتين","4–6 حملات شهريًا","6 نصوص وأفكار","اختبار جماهير متعددة","مراجعة صفحة المنتج","تقارير نصف شهرية وشهرية"]},
-        {name:"أداء المتجر", price:"4,500", tag:"نمو قوي", desc:"إدارة أداء متقدمة للمتاجر الجادة.", items:["إدارة 3 منصات","8–12 حملة شهريًا","إعادة الاستهداف","متابعة شبه يومية","تحسين الميزانية","تقارير أسبوعية وشهرية"]}
-      ],
-      social: [
-        {name:"حضور المتجر", price:"1,200", tag:"حضور مستمر", desc:"حساب مرتب واستمرارية نشر على منصة واحدة.", items:["إدارة منصة واحدة","خطة محتوى بسيطة","8 تصاميم","4 نصوص كابشن","4 أفكار ستوري","جدولة ونشر","تقرير شهري"]},
-        {name:"نمو التفاعل", price:"2,400", tag:"محتوى أقوى", desc:"إدارة منصتين مع تصاميم وفيديوهات قصيرة.", items:["إدارة منصتين","12 تصميمًا","4 ريلز قصيرة","8 نصوص كابشن","8 أفكار ستوري","متابعة أساسية","تقريران شهريًا"]},
-        {name:"المحتوى الشامل", price:"3,900", tag:"حضور احترافي", desc:"إدارة متكاملة لثلاث منصات.", items:["إدارة 3 منصات","16 تصميمًا","8 ريلز قصيرة","12 نص كابشن","12 فكرة ستوري","متابعة التعليقات","تقارير أسبوعية وشهرية"]}
-      ]
-    };
-
-    const grid = document.getElementById("packageGrid");
-    const tabs = document.querySelectorAll(".tab");
-
-    function wa(name) {
-      return "https://wa.me/966531587416?text=" + encodeURIComponent("مرحباً، أرغب في طلب باقة " + name);
-    }
-
-    function render(key) {
-      grid.innerHTML = data[key].map((p,i)=>`
-        <article class="package ${i===1?'featured':''}">
-          <span class="pkg-kicker">${p.tag}</span>
-          <h3>${p.name}</h3>
-          <div class="price-wrap">
-            <div class="price">${p.price}</div>
-            <div class="price-meta">ريال<br>${key==="setup"?"دفعة واحدة":"شهريًا"}</div>
-          </div>
-          <p>${p.desc}</p>
-          <ul>${p.items.map(x=>`<li>${x}</li>`).join("")}</ul>
-          <a class="btn btn-primary" href="${wa(p.name)}">اطلب عبر واتساب</a>
-        </article>`).join("");
-    }
-
-    tabs.forEach(tab=>tab.addEventListener("click",()=>{
-      tabs.forEach(t=>t.classList.remove("active"));
-      tab.classList.add("active");
-      render(tab.dataset.tab);
-    }));
-
-    document.querySelectorAll("[data-open]").forEach(link=>link.addEventListener("click",()=>{
-      const key=link.dataset.open;
-      tabs.forEach(t=>t.classList.toggle("active",t.dataset.tab===key));
-      render(key);
-    }));
-
-    render("setup");
-  </script>
+const extras=[
+["إعادة تصميم واجهة المتجر","900 ريال"],["Google Merchant Center","399 ريال"],["حجز وربط دومين","130 ريال"],
+["تحليل المتجر والتوصيات","150 ريال"],["SEO المتجر والمنتجات","1,900 ريال"],["كتابة وصف المنتجات","20 ريال / منتج"],
+["الصفحات التعريفية","99 ريال"],["تعديل أخطاء المتجر","599 ريال"],["ربط Google Ads","199 ريال"],
+["ربط Google Analytics","199 ريال"],["ربط Google Tag Manager","199 ريال"],["ربط Meta Pixel","199 ريال"]
+];
+document.getElementById("extraGrid").innerHTML=extras.map(x=>`<a class="card extra-card" target="_blank" rel="noopener" href="${wa(x[0])}"><strong>${x[0]}</strong><span>${x[1]}</span></a>`).join("");
+</script>
 </body>
 </html>
