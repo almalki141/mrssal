@@ -891,7 +891,40 @@
       .project-browser{height:158px}
     }
 
-  </style>
+  
+@media (max-width:768px){
+.projects-grid,
+.services-grid,
+.apps-grid{
+display:grid!important;
+grid-template-columns:repeat(3,minmax(0,1fr))!important;
+gap:12px!important;
+}
+.project-card,
+.service-card,
+.app-card{
+width:100%!important;
+margin:0!important;
+border-radius:18px!important;
+}
+.project-card h3,
+.service-card h3,
+.app-card h3{
+font-size:18px!important;
+}
+.project-card p,
+.service-card p,
+.app-card p{
+font-size:13px!important;
+line-height:1.6!important;
+}
+.project-card img{
+height:90px!important;
+object-fit:cover!important;
+}
+}
+
+</style>
 </head>
 <body>
   <header class="topbar">
