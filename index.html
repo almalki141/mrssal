@@ -6,7 +6,7 @@
   <title>مرسال | خدمات المتاجر الإلكترونية</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <meta name="description" content="كل خدمات متجرك الإلكتروني في مكان واحد: تأسيس المتاجر، الإدارة، الحملات الإعلانية، السوشيال ميديا، SEO وخدمات Google.">
   <style>
     :root {
@@ -25,7 +25,7 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+      font-family:"Changa",Tahoma,Arial,sans-serif;
       color:var(--ink);
       background:
         radial-gradient(circle at 8% 4%,rgba(180,135,76,.11),transparent 25%),
@@ -410,7 +410,7 @@
     }
 
     h1,h2,h3,.brand,.btn,.eyebrow,.tab,.pkg-kicker,.app-badge,.price,.app-price{
-      font-family:"Alexandria","IBM Plex Sans Arabic",sans-serif;
+      font-family:"Changa",sans-serif;
     }
 
     .topbar{
@@ -520,7 +520,7 @@
     .screen-body{padding:22px}
     .screen-hero{height:130px;border-radius:18px}
     .screen-hero:after{
-      font-family:"Alexandria",sans-serif;
+      font-family:"Changa",sans-serif;
       font-size:22px;
       top:34px;
     }
@@ -692,7 +692,7 @@
     }
 
     .why-panel .big{
-      font-family:"Alexandria",sans-serif;
+      font-family:"Changa",sans-serif;
       font-size:80px;
       letter-spacing:-2px;
     }
@@ -819,7 +819,7 @@
       align-items:center;
       justify-content:center;
       color:#fff;
-      font-family:"Alexandria",sans-serif;
+      font-family:"Changa",sans-serif;
       font-size:13px;
       font-weight:700;
       text-align:center;
@@ -892,36 +892,171 @@
     }
 
   
-@media (max-width:768px){
-.projects-grid,
-.services-grid,
-.apps-grid{
-display:grid!important;
-grid-template-columns:repeat(3,minmax(0,1fr))!important;
-gap:12px!important;
-}
-.project-card,
-.service-card,
-.app-card{
-width:100%!important;
-margin:0!important;
-border-radius:18px!important;
-}
-.project-card h3,
-.service-card h3,
-.app-card h3{
-font-size:18px!important;
-}
-.project-card p,
-.service-card p,
-.app-card p{
-font-size:13px!important;
-line-height:1.6!important;
-}
-.project-card img{
-height:90px!important;
-object-fit:cover!important;
-}
+/* تصحيح نهائي: 3 بطاقات بجانب بعضها على الجوال */
+@media (max-width: 768px) {
+  .portfolio-grid,
+  .services,
+  .apps-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+
+  .project-card,
+  .service,
+  .app-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    border-radius: 16px !important;
+    transform: none !important;
+  }
+
+  /* بطاقات الأعمال */
+  .project-shot {
+    height: 92px !important;
+    padding: 7px !important;
+  }
+  .project-browser {
+    height: 78px !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .project-browser-top {
+    height: 14px !important;
+    padding: 0 5px !important;
+  }
+  .project-browser-top i {
+    width: 4px !important;
+    height: 4px !important;
+  }
+  .project-browser-body {
+    padding: 6px !important;
+  }
+  .project-browser-hero {
+    height: 34px !important;
+    font-size: 8px !important;
+    border-radius: 6px !important;
+  }
+  .project-browser-lines {
+    gap: 3px !important;
+    margin-top: 4px !important;
+  }
+  .project-browser-lines span {
+    height: 13px !important;
+    border-radius: 4px !important;
+  }
+  .project-content {
+    padding: 10px 6px 8px !important;
+  }
+  .project-meta {
+    display: block !important;
+    margin-bottom: 5px !important;
+  }
+  .project-type {
+    padding: 3px 6px !important;
+    font-size: 8px !important;
+  }
+  .project-meta small {
+    display: none !important;
+  }
+  .project-card h3 {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    margin: 5px 0 !important;
+  }
+  .project-card p {
+    display: none !important;
+  }
+  .project-link {
+    font-size: 9px !important;
+    margin-top: 5px !important;
+  }
+
+  /* بطاقات الخدمات */
+  .service {
+    padding: 12px 9px !important;
+  }
+  .service .icon {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 11px !important;
+    font-size: 17px !important;
+    margin-bottom: 9px !important;
+  }
+  .service h3 {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 5px !important;
+  }
+  .service p {
+    font-size: 10px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 7px !important;
+  }
+  .service ul {
+    margin-bottom: 8px !important;
+  }
+  .service li {
+    font-size: 9px !important;
+    line-height: 1.45 !important;
+    padding: 3px 12px 3px 0 !important;
+  }
+  .service li:before {
+    font-size: 9px !important;
+  }
+  .service .text-link {
+    font-size: 9px !important;
+  }
+
+  /* بطاقات التطبيقات */
+  .app-card {
+    padding: 14px 9px !important;
+    border-radius: 17px !important;
+  }
+  .app-badge {
+    padding: 4px 6px !important;
+    font-size: 8px !important;
+    margin-bottom: 7px !important;
+  }
+  .app-card h3 {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+  .app-card p {
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 7px !important;
+  }
+  .app-price {
+    font-size: 24px !important;
+    margin: 7px 0 10px !important;
+    white-space: nowrap !important;
+  }
+  .app-price small {
+    font-size: 8px !important;
+  }
+  .app-list {
+    margin-bottom: 10px !important;
+  }
+  .app-list li {
+    font-size: 8px !important;
+    line-height: 1.45 !important;
+    padding: 5px 11px 5px 0 !important;
+  }
+  .app-card .btn {
+    min-height: 34px !important;
+    padding: 0 7px !important;
+    font-size: 9px !important;
+    border-radius: 10px !important;
+  }
+
+  .portfolio-section,
+  .apps-section,
+  #services {
+    overflow-x: hidden !important;
+  }
 }
 
 </style>
