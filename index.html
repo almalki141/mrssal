@@ -985,6 +985,219 @@
   .app-price{font-size:18px!important}
 }
 
+
+/* =========================================================
+   استكمال تصميم الجوال — الباقات والتطبيقات 3 بطاقات في الصف
+   ========================================================= */
+@media screen and (max-width: 767px) {
+
+  /* شريط تبويبات الباقات */
+  .tabs{
+    display:grid !important;
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    gap:5px !important;
+    width:100% !important;
+    padding:6px !important;
+    border-radius:18px !important;
+    overflow:visible !important;
+  }
+
+  .tab{
+    min-width:0 !important;
+    padding:8px 3px !important;
+    border-radius:11px !important;
+    font-size:9px !important;
+    line-height:1.35 !important;
+    white-space:normal !important;
+  }
+
+  /* باقات الإدارة والتأسيس والحملات والسوشيال */
+  .packages{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:7px !important;
+    align-items:stretch !important;
+  }
+
+  .package,
+  .package.featured{
+    min-width:0 !important;
+    width:auto !important;
+    margin:0 !important;
+    padding:12px 7px 10px !important;
+    border-radius:15px !important;
+    transform:none !important;
+    box-shadow:0 8px 22px rgba(68,45,24,.08) !important;
+  }
+
+  .package:before{
+    height:3px !important;
+  }
+
+  .package.featured:after{
+    display:none !important;
+  }
+
+  .pkg-kicker,
+  .pkg-tag{
+    font-size:7px !important;
+    line-height:1.35 !important;
+    margin-bottom:4px !important;
+  }
+
+  .pkg-kicker:before{
+    width:5px !important;
+    height:5px !important;
+  }
+
+  .package h3{
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin:3px 0 5px !important;
+  }
+
+  .price-wrap{
+    display:block !important;
+    padding:6px 0 8px !important;
+    margin:4px 0 6px !important;
+  }
+
+  .price{
+    font-size:22px !important;
+    line-height:1.1 !important;
+    letter-spacing:-.6px !important;
+    white-space:nowrap !important;
+  }
+
+  .price small{
+    font-size:7px !important;
+  }
+
+  .price-meta{
+    font-size:7px !important;
+    line-height:1.4 !important;
+    padding:3px 0 0 !important;
+  }
+
+  .package p{
+    display:none !important;
+  }
+
+  .package ul{
+    margin:0 0 8px !important;
+  }
+
+  .package li{
+    display:none !important;
+  }
+
+  .package li:nth-child(-n+3){
+    display:block !important;
+    font-size:7px !important;
+    line-height:1.45 !important;
+    padding:4px 9px 4px 0 !important;
+    border-bottom:1px solid #f1e6d7 !important;
+  }
+
+  .package li:before{
+    font-size:7px !important;
+  }
+
+  .package .btn{
+    width:100% !important;
+    min-height:31px !important;
+    padding:0 4px !important;
+    border-radius:9px !important;
+    font-size:7px !important;
+    line-height:1.2 !important;
+  }
+
+  /* قسم التطبيقات */
+  .apps-section .section-head h2{
+    font-size:28px !important;
+  }
+
+  .apps-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:7px !important;
+    align-items:stretch !important;
+  }
+
+  .app-card,
+  .app-card.featured{
+    min-width:0 !important;
+    width:auto !important;
+    margin:0 !important;
+    padding:12px 7px 10px !important;
+    border-radius:15px !important;
+    transform:none !important;
+  }
+
+  .app-badge{
+    font-size:7px !important;
+    padding:3px 5px !important;
+    margin-bottom:6px !important;
+    line-height:1.35 !important;
+  }
+
+  .app-card h3{
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin:0 0 4px !important;
+  }
+
+  .app-card p{
+    display:none !important;
+  }
+
+  .app-price{
+    font-size:21px !important;
+    line-height:1.1 !important;
+    margin:7px 0 8px !important;
+    white-space:nowrap !important;
+  }
+
+  .app-price small{
+    display:block !important;
+    font-size:7px !important;
+    margin-top:3px !important;
+  }
+
+  .app-list{
+    margin:0 0 8px !important;
+  }
+
+  .app-list li{
+    display:none !important;
+  }
+
+  .app-list li:nth-child(-n+3){
+    display:block !important;
+    font-size:7px !important;
+    line-height:1.45 !important;
+    padding:4px 9px 4px 0 !important;
+  }
+
+  .app-list li:before{
+    font-size:7px !important;
+  }
+
+  .app-card .btn{
+    width:100% !important;
+    min-height:31px !important;
+    padding:0 4px !important;
+    border-radius:9px !important;
+    font-size:7px !important;
+    line-height:1.2 !important;
+  }
+
+  #packages,
+  .apps-section{
+    overflow:hidden !important;
+  }
+}
+
 </style>
 </head>
 <body>
