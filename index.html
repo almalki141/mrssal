@@ -425,10 +425,10 @@ footer{background:#10231d;color:#e2ece7}footer p,footer a,footer span{color:#b9c
   <div class="container">
     <div class="section-head"><span class="kicker">الخدمات الرئيسية</span><h2>كل ما يحتاجه متجرك في مكان واحد</h2><p>نبدأ من احتياجك الحقيقي ونبني الحل المناسب لمرحلة مشروعك.</p></div>
     <div class="grid service-grid">
-      <article class="card service-card"><div class="service-icon">🏪</div><h3>تأسيس المتاجر</h3><p>متجر مرتب وسريع وجاهز لاستقبال أول طلب.</p><ul class="checks"><li>تصميم الواجهة</li><li>الدفع والشحن</li><li>رفع المنتجات</li><li>الصفحات والأقسام</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
-      <article class="card service-card"><div class="service-icon">⚙️</div><h3>إدارة المتاجر</h3><p>تشغيل وتحسين مستمر للمنتجات والعروض والطلبات.</p><ul class="checks"><li>إدارة المنتجات</li><li>العروض والكوبونات</li><li>تحسين تجربة العميل</li><li>تقارير دورية</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
-      <article class="card service-card"><div class="service-icon">📈</div><h3>الحملات الإعلانية</h3><p>حملات مدروسة للوصول إلى العملاء وقياس النتائج.</p><ul class="checks"><li>Google وMeta</li><li>TikTok وSnapchat</li><li>اختبار الجماهير</li><li>تحسين الأداء</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
-      <article class="card service-card"><div class="service-icon">📱</div><h3>السوشيال ميديا</h3><p>محتوى مستمر يعزز الثقة ويجهز العميل للشراء.</p><ul class="checks"><li>تصاميم احترافية</li><li>مقاطع قصيرة</li><li>كتابة المحتوى</li><li>النشر والمتابعة</li></ul><a class="link" href="#packages">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">🏪</div><h3>تأسيس المتاجر</h3><p>متجر مرتب وسريع وجاهز لاستقبال أول طلب.</p><ul class="checks"><li>تصميم الواجهة</li><li>الدفع والشحن</li><li>رفع المنتجات</li><li>الصفحات والأقسام</li></ul><a class="link" href="#packages" data-package="setup">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">⚙️</div><h3>إدارة المتاجر</h3><p>تشغيل وتحسين مستمر للمنتجات والعروض والطلبات.</p><ul class="checks"><li>إدارة المنتجات</li><li>العروض والكوبونات</li><li>تحسين تجربة العميل</li><li>تقارير دورية</li></ul><a class="link" href="#packages" data-package="management">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">📈</div><h3>الحملات الإعلانية</h3><p>حملات مدروسة للوصول إلى العملاء وقياس النتائج.</p><ul class="checks"><li>Google وMeta</li><li>TikTok وSnapchat</li><li>اختبار الجماهير</li><li>تحسين الأداء</li></ul><a class="link" href="#packages" data-package="ads">عرض الباقات ←</a></article>
+      <article class="card service-card"><div class="service-icon">📱</div><h3>السوشيال ميديا</h3><p>محتوى مستمر يعزز الثقة ويجهز العميل للشراء.</p><ul class="checks"><li>تصاميم احترافية</li><li>مقاطع قصيرة</li><li>كتابة المحتوى</li><li>النشر والمتابعة</li></ul><a class="link" href="#packages" data-package="social">عرض الباقات ←</a></article>
       <article class="card service-card"><div class="service-icon">🔎</div><h3>SEO وخدمات Google</h3><p>تهيئة المتجر للبحث وربط أدوات القياس والتحليل.</p><ul class="checks"><li>SEO المتجر</li><li>Analytics وGTM</li><li>Merchant Center</li><li>البكسلات</li></ul><a class="link" href="#extra">عرض الخدمات ←</a></article>
       <article class="card service-card"><div class="service-icon">✨</div><h3>التصميم والتطبيقات</h3><p>واجهات وهوية وتطبيقات تدعم توسع مشروعك.</p><ul class="checks"><li>UI/UX</li><li>تصميم المحتوى</li><li>تطبيقات iOS وAndroid</li><li>لوحات التحكم</li></ul><a class="link" href="#apps">عرض الباقات ←</a></article>
     </div>
@@ -545,7 +545,7 @@ social:{label:"السوشيال ميديا",cards:[
 
 const tabs = document.getElementById("tabs");
 Object.entries(packageSets).forEach(([key,val],i)=>{
-  const b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.textContent=val.label;b.onclick=()=>renderPackages(key,b);tabs.appendChild(b);
+  const b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.dataset.packageKey=key;b.textContent=val.label;b.onclick=()=>renderPackages(key,b);tabs.appendChild(b);
 });
 function renderPackages(key,btn){
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
@@ -553,6 +553,10 @@ function renderPackages(key,btn){
   <article class="card package-card ${c[4]?"featured":""}"><span class="package-kicker">${packageSets[key].label}</span><h3>${c[0]}</h3><div class="price">${c[1]} <small>ريال</small></div><p>${c[2]}</p><ul class="checks">${c[3].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn btn-primary" target="_blank" rel="noopener" href="${wa(c[0])}">اطلب عبر واتساب</a></article>`).join("");
 }
 renderPackages("setup",tabs.children[0]);
+document.querySelectorAll("[data-package]").forEach(link=>link.addEventListener("click",()=>{
+  const targetTab=tabs.querySelector(`[data-package-key="${link.dataset.package}"]`);
+  if(targetTab) renderPackages(link.dataset.package,targetTab);
+}));
 
 const extras=[
 ["إعادة تصميم واجهة المتجر","900 ريال"],["Google Merchant Center","399 ريال"],["حجز وربط دومين","130 ريال"],
