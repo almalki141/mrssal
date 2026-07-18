@@ -4,30 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="description" content="مرسال — حلول تأسيس وإدارة وتسويق المتاجر الإلكترونية وتطوير التطبيقات.">
-  <meta name="theme-color" content="#17110d">
+  <meta name="theme-color" content="#142a25">
   <title>مرسال | شريكك التقني لنمو متجرك</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#f6f0e7;
-      --paper:#fffdfa;
-      --paper-2:#efe4d4;
-      --ink:#211812;
-      --muted:#766a60;
-      --gold:#b78649;
-      --gold-2:#805429;
-      --gold-3:#d7b17c;
-      --line:#e3d4c0;
-      --dark:#201711;
-      --dark-2:#120d0a;
+      --bg:#ffffff;
+      --paper:#ffffff;
+      --paper-2:#edf4f1;
+      --ink:#142a25;
+      --muted:#64736d;
+      --gold:#c3a36c;
+      --gold-2:#1b4b3d;
+      --gold-3:#ddc9a5;
+      --line:#dbe5e0;
+      --dark:#142a25;
+      --dark-2:#0d211b;
       --green:#21b65d;
       --radius:28px;
-      --shadow:0 24px 70px rgba(52,33,18,.12);
-      --shadow-soft:0 12px 36px rgba(52,33,18,.08);
+      --shadow:0 24px 70px rgba(20,42,37,.12);
+      --shadow-soft:0 12px 36px rgba(20,42,37,.08);
       --container:min(1220px,calc(100% - 32px));
     }
 
@@ -35,11 +35,11 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:"Readex Pro",sans-serif;
+      font-family:"DIN Next LT Arabic","DINNextLTArabic-Regular","IBM Plex Sans Arabic",sans-serif;
       color:var(--ink);
       background:
-        radial-gradient(circle at 8% 0%,rgba(183,134,73,.15),transparent 28%),
-        radial-gradient(circle at 94% 13%,rgba(128,84,41,.10),transparent 25%),
+        radial-gradient(circle at 8% 0%,rgba(20,42,37,.07),transparent 28%),
+        radial-gradient(circle at 94% 13%,rgba(195,163,108,.12),transparent 25%),
         var(--bg);
       line-height:1.85;
       overflow-x:hidden;
@@ -329,6 +329,30 @@
 }
 .trust-item{font-size:15px;font-weight:600;color:#6d4b2b}
 .trust-note{margin-top:12px;text-align:center;color:var(--muted);font-size:14px}
+
+/* هوية مرسال الحالية: أخضر عميق، أبيض نظيف، ولمسة ذهبية هادئة */
+.section.soft{background:#f8fbf9;border-color:#e2ebe6}
+.topbar{background:rgba(255,255,255,.88);border-color:#e2ebe6}
+.btn-primary,.brand-mark,.tab.active{background:linear-gradient(135deg,#1d4a3d,#123129);box-shadow:0 14px 34px rgba(20,42,37,.23)}
+.btn-dark{background:#142a25}
+.nav-links a:hover{color:#1b4b3d;background:#f1f6f3}
+.hero h1 span,.package-kicker,.price,.extra-card span,.why-card b,.link,summary:after,.checks li:before,.trust-item{color:#1b4b3d}
+.hero-art{background:linear-gradient(145deg,#fff,#eaf3ef)}
+.hero-art:before{background:rgba(195,163,108,.15)}
+.dashboard{border-color:#173b31;box-shadow:0 36px 70px rgba(20,42,37,.23)}
+.dash-top{background:#e7f0eb}.dash-top i{background:#c3a36c}
+.chart,.metric{border-color:#e0ebe5;background:#fbfdfc}.bars i,.browser-hero{background:linear-gradient(#2d6855,#15372d)}
+.float{border-color:#dce8e2}.float.c{color:#247b4c}
+.card{background:linear-gradient(180deg,#fff,#f9fcfa);border-color:#dce7e1}
+.work-shot{background:linear-gradient(145deg,#e2eee8,#f8fbf9)}
+.browser{box-shadow:0 15px 35px rgba(20,42,37,.13)}.browser-top{background:#dfece5}.browser-top i{background:#c3a36c}.browser-lines span{background:#e8f0ec}
+.tag{background:#edf4f0;color:#1b4b3d}.service-icon{background:linear-gradient(145deg,#f8fcfa,#d9e9e1);box-shadow:inset 0 0 0 1px rgba(27,75,61,.15)}
+.package-card.featured{border-color:#1b4b3d;background:linear-gradient(180deg,#f2f8f4,#fff)}.package-card.featured:after{background:#1b4b3d}
+.section.dark .app-card{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border-color:rgba(255,255,255,.18);color:#fff}
+.section.dark .app-card.featured{background:linear-gradient(180deg,#275d4c,#112b23)}.app-badge{color:#e4d0a8}.app-card .btn,.cta .btn{color:#1b4b3d}
+.cta{background:linear-gradient(135deg,#1d4a3d,#102a22);box-shadow:0 24px 70px rgba(20,42,37,.2)}.cta p{color:#dce9e2}
+footer{background:#10231d;color:#e2ece7}footer p,footer a,footer span{color:#b9ccc3}.copy{color:#91a9a0}
+.trust-bar{background:#fff;border-color:#d7e4dd;box-shadow:0 10px 30px rgba(20,42,37,.05)}
 @media(max-width:768px){
   .trust-bar{gap:10px;padding:16px}
   .trust-item{width:100%;text-align:center;font-size:13px}
